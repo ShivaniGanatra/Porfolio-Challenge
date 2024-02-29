@@ -37,19 +37,20 @@ body {
     background-color: $primary-color;
 }
 
-.flex-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 70px
-} 
-
 footer {
     background-color: $tertiary-color;
     max-height: 100px;
     display: flex;
     flex-direction: column;
+}
 
+@media screen and (min-width:768px){
+    .flex-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 621px 621px;
+        gap: 10;
+    }
 }
 
 
