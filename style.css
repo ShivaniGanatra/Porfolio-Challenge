@@ -5,6 +5,27 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+h2 {
+  font-size: 60px;
+  padding: 0px;
+}
+
+body .main .main__title {
+  text-align: center;
+  font-size: 30px;
+}
+
+body .main .second__image {
+  max-width: 340px;
+  display: flex;
+  justify-content: center;
+}
+
 body {
   background-color: white;
 }
@@ -13,23 +34,12 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  gap: 70px;
 }
 
-.flex-container .card .card__body {
+footer {
+  background-color: black;
+  max-height: 100px;
   display: flex;
-  flex-wrap: wrap;
-  width: 400px;
-  height: 700px;
-  background-color: pink;
-  padding: 20px;
-}
-
-.card .button {
-  font-size: 20px;
-  padding: 5px;
-  border: 0 black;
-  border-radius: 20px;
-  width: 70px;
-  height: 30px;
-  background-color: white;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
