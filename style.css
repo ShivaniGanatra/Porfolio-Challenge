@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.flex-container .card .card__body {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 700px;
+  background-color: pink;
+  padding: 20px;
+}
+
+.card .button {
+  font-size: 20px;
+  padding: 5px;
+  border: 0 black;
+  border-radius: 20px;
+  width: 70px;
+  height: 30px;
+  background-color: white;
+}/*# sourceMappingURL=style.css.map */

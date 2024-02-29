@@ -1,0 +1,53 @@
+$primary-color:white;
+$secondary-color:pink;
+$tertiary-color:black;
+
+* {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    // add google fonts
+}
+
+body {
+    background-color: $primary-color;
+}
+
+.flex-container .projects .card {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+} 
+
+.flex-container .card .card__body {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 700px;
+    background-color: pink;
+    padding: 20px;
+}
+
+.flex-container .card .card__image{
+    width: auto;
+    height: auto;
+}
+
+.card .button {
+    font-size: 20px;
+    padding: 5px;
+    border: 0 black;
+    border-radius: 10px;
+    width: 70px;
+    height: 30px;
+    background-color: white;
+    align-self: center;
+}
+
+& __codey :hover {
+    background-color: $tertiary-color;
+    color: $primary-color;
+
+}
+
