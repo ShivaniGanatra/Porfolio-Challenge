@@ -13,13 +13,21 @@ $tertiary-color:black;
    
 }
 
+.navigation-container {
+    border: 2px solid red;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: flex-end;
+}
 
 .navigation__button {
         text-decoration: none;
         background-color: $primary-color;
         color: $tertiary-color;
-        padding: 15px 20px;
+        padding: 11px 25px;
         border: $primary-color solid 2px;
+        border-radius: 4px;
        flex-direction: column;
     }
         
