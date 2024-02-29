@@ -17,7 +17,7 @@
 .navigation__button {
   text-decoration: none;
   background-color: white;
-  color: black;
+  color: white;
   padding: 11px 25px;
   border: white solid 2px;
   border-radius: 4px;
@@ -27,16 +27,25 @@
 header {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  padding: 50px;
 }
 
 h2 {
   font-size: 60px;
-  padding: 0px;
+  padding: 30px;
 }
 
 body .main .main__title {
   text-align: center;
   font-size: 30px;
+  padding: 50px;
 }
 
 body .main .second__image {
@@ -49,23 +58,67 @@ body {
   background-color: white;
 }
 
+.technical-skill-icon-container {
+  border: 2px red solid;
+  display: grid;
+  grid-template-rows: 122px 122px 122px;
+  grid-template-columns: 122px 122px 122px;
+  padding: 100px;
+  justify-content: center;
+}
+
 footer {
   background-color: black;
   max-height: 100px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
-.flex-container--item {
-  max-width: 440px;
-  max-height: auto;
+.flex-container {
+  border: 2px red solid;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
 }
 
+@media screen and (max-width: 768px) {
+  .navigation-container {
+    border: 2px solid white;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .navigation__button-getintouch {
+    opacity: 0;
+  }
+}
 @media screen and (min-width: 768px) {
-  .flex-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 621px 621px;
-    gap: 10px;
+  .technical-skill-icon-container {
+    display: flex;
+    background-color: aquamarine;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .navigation-container {
+    border: 2px solid red;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .navigation__button {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 11px 25px;
+    border: white solid 2px;
+    border-radius: 4px;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */
