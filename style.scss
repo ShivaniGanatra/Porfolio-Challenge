@@ -1,6 +1,6 @@
-$primary-color:white;
-$secondary-color:pink;
-$tertiary-color:black;
+$primary-color: white;
+$secondary-color: pink;
+$tertiary-color: black;
 
 // put these into variables
 
@@ -10,7 +10,7 @@ $tertiary-color:black;
     margin: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-   
+
 }
 
 .navigation-container {
@@ -29,7 +29,7 @@ $tertiary-color:black;
     border: $primary-color solid 2px;
     border-radius: 4px;
     flex-direction: column;
- }
+}
 
 header {
     font-family: Arial, Helvetica, sans-serif;
@@ -39,9 +39,11 @@ header {
     align-items: center;
     justify-content: center;
 }
+
 h1 {
     padding: 50px;
 }
+
 h2 {
     font-size: 60px;
     padding: 30px;
@@ -51,7 +53,7 @@ body .main .main__title {
     text-align: center;
     font-size: 30px;
     padding: 50px;
-} 
+}
 
 body .main .second__image {
     max-width: 340px;
@@ -74,9 +76,7 @@ body {
 
 footer {
     background-color: $tertiary-color;
-    max-height: 100px;
-    display: flex;
-    flex-direction: row;
+    height: 216px;
 }
 
 .flex-container {
@@ -87,7 +87,24 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: auto; }
+    width: auto;
+}
+
+.flex-container--item {
+    padding-bottom: 60px;
+}
+
+.footer__icons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 157px;
+    height: 45px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 @media screen and (max-width:768px) {
     .navigation-container {
@@ -97,12 +114,28 @@ footer {
         flex-direction: row;
         align-items: flex-end;
     }
+
     .navigation__button-getintouch {
         opacity: 0;
     }
 }
 
-@media screen and (min-width:768px){
+footer {
+    background-color: $tertiary-color;
+    height: 216px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__email {
+    color: $primary-color;
+    padding: 35px;
+}
+
+
+@media screen and (min-width:768px) {
 
     .technical-skill-icon-container {
         display: flex;
@@ -119,15 +152,35 @@ footer {
         flex-direction: row;
         align-items: flex-end;
     }
-    
+
     .navigation__button {
-            text-decoration: none;
-            background-color: $primary-color;
-            color: $tertiary-color;
-            padding: 11px 25px;
-            border: $primary-color solid 2px;
-            border-radius: 4px;
-           flex-direction: column;
-        }
+        text-decoration: none;
+        background-color: $primary-color;
+        color: $tertiary-color;
+        padding: 11px 25px;
+        border: $primary-color solid 2px;
+        border-radius: 4px;
+        flex-direction: column;
+    }
+
+    footer {
+        background-color: $tertiary-color;
+        height: 155px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding-right: 60px;
+
+    }
+
+
+
+
+
+
+
+
+
+
 
 }

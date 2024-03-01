@@ -69,9 +69,7 @@ body {
 
 footer {
   background-color: black;
-  max-height: 100px;
-  display: flex;
-  flex-direction: row;
+  height: 216px;
 }
 
 .flex-container {
@@ -83,6 +81,20 @@ footer {
   justify-content: center;
   align-items: center;
   width: auto;
+}
+
+.flex-container--item {
+  padding-bottom: 60px;
+}
+
+.footer__icons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 157px;
+  height: 45px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -97,6 +109,20 @@ footer {
     opacity: 0;
   }
 }
+footer {
+  background-color: black;
+  height: 216px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__email {
+  color: white;
+  padding: 35px;
+}
+
 @media screen and (min-width: 768px) {
   .technical-skill-icon-container {
     display: flex;
@@ -120,5 +146,13 @@ footer {
     border: white solid 2px;
     border-radius: 4px;
     flex-direction: column;
+  }
+  footer {
+    background-color: black;
+    height: 155px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-right: 60px;
   }
 }/*# sourceMappingURL=style.css.map */
