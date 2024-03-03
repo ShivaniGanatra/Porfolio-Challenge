@@ -6,22 +6,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.navigation-container {
-  border: 2px solid red;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: row;
-  align-items: flex-end;
-}
-
-.navigation__button {
-  text-decoration: none;
-  background-color: white;
-  color: white;
-  padding: 11px 25px;
-  border: white solid 2px;
-  border-radius: 4px;
-  flex-direction: column;
+nav {
+  opacity: 0;
 }
 
 header {
@@ -40,22 +26,6 @@ h1 {
 h2 {
   font-size: 60px;
   padding: 30px;
-}
-
-body .main .main__title {
-  text-align: center;
-  font-size: 30px;
-  padding: 50px;
-}
-
-body .main .second__image {
-  max-width: 340px;
-  display: flex;
-  justify-content: center;
-}
-
-body {
-  background-color: white;
 }
 
 .technical-skill-icon-container {
@@ -105,24 +75,19 @@ footer {
     flex-direction: row;
     align-items: flex-end;
   }
-  .navigation__button-getintouch {
-    opacity: 0;
+  footer {
+    background-color: black;
+    height: 216px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__email {
+    color: white;
+    padding: 35px;
   }
 }
-footer {
-  background-color: black;
-  height: 216px;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer__email {
-  color: white;
-  padding: 35px;
-}
-
 @media screen and (min-width: 768px) {
   .technical-skill-icon-container {
     display: flex;

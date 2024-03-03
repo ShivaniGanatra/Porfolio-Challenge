@@ -1,8 +1,8 @@
-$primary-color: white;
-$secondary-color: pink;
-$tertiary-color: black;
+@use"./variables.scss";
 
-// put these into variables
+
+
+
 
 * {
     padding: 0;
@@ -24,7 +24,7 @@ $tertiary-color: black;
 .navigation__button {
     text-decoration: none;
     background-color: $primary-color;
-    color: $primary-color;
+    color: $tertiary-color;
     padding: 11px 25px;
     border: $primary-color solid 2px;
     border-radius: 4px;
@@ -49,21 +49,7 @@ h2 {
     padding: 30px;
 }
 
-body .main .main__title {
-    text-align: center;
-    font-size: 30px;
-    padding: 50px;
-}
 
-body .main .second__image {
-    max-width: 340px;
-    display: flex;
-    justify-content: center;
-}
-
-body {
-    background-color: $primary-color;
-}
 
 .technical-skill-icon-container {
     border: 2px red solid;
@@ -115,25 +101,22 @@ footer {
         align-items: flex-end;
     }
 
-    .navigation__button-getintouch {
-        opacity: 0;
+
+
+    footer {
+        background-color: $tertiary-color;
+        height: 216px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__email {
+        color: $primary-color;
+        padding: 35px;
     }
 }
-
-footer {
-    background-color: $tertiary-color;
-    height: 216px;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer__email {
-    color: $primary-color;
-    padding: 35px;
-}
-
 
 @media screen and (min-width:768px) {
 
@@ -172,15 +155,4 @@ footer {
         padding-right: 60px;
 
     }
-
-
-
-
-
-
-
-
-
-
-
 }
