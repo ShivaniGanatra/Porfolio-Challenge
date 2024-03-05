@@ -163,7 +163,7 @@ footer {
     background-color: black;
     height: 155px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row;
     padding-right: 60px;
   }
