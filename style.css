@@ -103,9 +103,6 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-  header {
-    border: 2px red solid;
-  }
   header img {
     display: block;
   }
@@ -117,10 +114,13 @@ footer {
     align-items: flex-end;
   }
   .project-container {
+    justify-content: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    margin: 10px;
+    gap: 10px;
+    justify-content: center;
+    padding-left: 60px;
   }
   footer {
     background-color: black;
@@ -144,7 +144,6 @@ footer {
     justify-content: center;
   }
   .navigation-container {
-    border: 2px solid red;
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
@@ -163,8 +162,8 @@ footer {
     background-color: black;
     height: 155px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row;
-    padding-right: 60px;
+    padding: 100px;
   }
 }/*# sourceMappingURL=style.css.map */

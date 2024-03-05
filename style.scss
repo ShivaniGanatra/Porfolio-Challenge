@@ -106,14 +106,9 @@ footer {
     margin: 0;
 }
 
-
-
-
 @media screen and (min-width:768px) {
 
     header {
-        border: 2px red solid;
-
         img {
             display: block;
         }
@@ -128,10 +123,14 @@ footer {
     }
 
     .project-container {
+        justify-content: center;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        margin: 10px;
+        gap: 10px;
+        justify-content: center;
+        padding-left: 60px;
+
     }
 
     footer {
@@ -160,7 +159,6 @@ footer {
     }
 
     .navigation-container {
-        border: 2px solid red;
         display: flex;
         justify-content: flex-end;
         flex-direction: row;
@@ -181,9 +179,10 @@ footer {
         background-color: $tertiary-color;
         height: 155px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         flex-direction: row;
-        padding-right: 60px;
+        padding: 100px;
+
 
     }
 }
