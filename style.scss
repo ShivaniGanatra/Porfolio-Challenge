@@ -112,6 +112,9 @@ footer {
         img {
             display: block;
         }
+
+        display: flex;
+        flex-direction: row;
     }
 
     .navigation-container {
@@ -121,6 +124,7 @@ footer {
         flex-direction: row;
         align-items: flex-end;
     }
+
 
     .project-container {
         justify-content: center;
