@@ -38,13 +38,17 @@ header {
     }
 }
 
-.main__title {
+.main__title--1 {
     display: flex;
     justify-content: center;
     padding: 30px;
 }
 
-.first__image {
+.main__title--2 {
+    display: none;
+}
+
+.main__image {
     display: flex;
     justify-content: center;
     padding: 30px;
@@ -108,6 +112,14 @@ footer {
 
 @media screen and (min-width:768px) {
 
+    .navigation-container {
+        border: 2px solid white;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
     header {
         img {
             display: block;
@@ -117,14 +129,24 @@ footer {
         flex-direction: row;
     }
 
-    .navigation-container {
-        border: 2px solid white;
+    .main {
         display: flex;
-        justify-content: flex-end;
         flex-direction: row;
-        align-items: flex-end;
     }
 
+    .main__title--1 {
+        display: none;
+    }
+
+    .main__title--2 {
+        display: block;
+        padding-left: 40px;
+    }
+
+
+    .main__image {
+        flex-grow: 2;
+    }
 
     .project-container {
         justify-content: center;
