@@ -1,9 +1,17 @@
+p {
+  background-color: green;
+}
+
 * {
   padding: 0;
   border: 0;
   margin: 0px;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  border: 50px solid red;
 }
 
 header {
@@ -14,18 +22,16 @@ header {
   align-items: center;
   justify-content: center;
 }
-
-h1 {
+header h1 {
   padding: 50px;
 }
-
-h2 {
+header h2 {
   font-size: 60px;
   padding: 30px;
 }
 
 .technical-skill-icon-container {
-  border: 2px red solid;
+  border: 2px pink;
   display: grid;
   grid-template-rows: 122px 122px 122px;
   grid-template-columns: 122px 122px 122px;
@@ -38,21 +44,6 @@ footer {
   height: 216px;
 }
 
-.flex-container {
-  border: 2px red solid;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 40px;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-}
-
-.flex-container--item {
-  padding-bottom: 60px;
-}
-
 .footer__icons {
   display: flex;
   flex-wrap: wrap;
@@ -63,13 +54,19 @@ footer {
   justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .navigation-container {
     border: 2px solid white;
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
     align-items: flex-end;
+  }
+  .project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 10px;
   }
   footer {
     background-color: black;
@@ -84,7 +81,7 @@ footer {
     padding: 35px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
   .technical-skill-icon-container {
     display: flex;
     background-color: aquamarine;
