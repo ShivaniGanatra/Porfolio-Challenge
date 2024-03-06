@@ -1,3 +1,41 @@
+.technical-skill-icon-container {
+  display: grid;
+  grid-template-rows: 122px 122px 122px;
+  grid-template-columns: 122px 122px 122px;
+  padding: 100px;
+  justify-content: center;
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 70px;
+  padding-bottom: 100px;
+  align-items: center;
+}
+.project-container--item {
+  width: 373px;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__container {
+    border: 2px solid white;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .project-container {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+    padding-left: 60px;
+  }
+}
 * {
   padding: 0;
   border: 0;
@@ -61,26 +99,6 @@ header img {
   padding: 50px;
 }
 
-.technical-skill-icon-container {
-  display: grid;
-  grid-template-rows: 122px 122px 122px;
-  grid-template-columns: 122px 122px 122px;
-  padding: 100px;
-  justify-content: center;
-}
-
-.project-container {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 70px;
-  padding-bottom: 100px;
-  align-items: center;
-}
-.project-container--item {
-  width: 373px;
-}
-
 .footer {
   background-color: black;
   height: 216px;
@@ -97,13 +115,6 @@ header img {
 }
 
 @media screen and (min-width: 768px) {
-  .navigation__container {
-    border: 2px solid white;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    align-items: flex-end;
-  }
   header {
     display: flex;
     flex-direction: row;
@@ -125,15 +136,6 @@ header img {
   .main__image {
     flex-grow: 2;
   }
-  .project-container {
-    justify-content: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px;
-    justify-content: center;
-    padding-left: 60px;
-  }
   .footer {
     background-color: black;
     height: 216px;
@@ -148,27 +150,6 @@ header img {
   }
 }
 @media screen and (min-width: 1440px) {
-  .technical-skill-icon-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .navigation__container {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    align-items: flex-end;
-  }
-  .navigation__container__button {
-    text-decoration: none;
-    background-color: white;
-    color: black;
-    padding: 11px 25px;
-    border: white solid 2px;
-    border-radius: 4px;
-    flex-direction: column;
-  }
   footer {
     background-color: black;
     height: 155px;

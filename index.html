@@ -12,12 +12,11 @@
 
     <nav class="navigation__container">
         <a class="navigation__container__button" href="">Home</a>
-        <a class="navigation__container__button" href="">About</a>
-        <a class="navigation__container__button" href="">Projects</a>
-        <img class="navigation__container__button-getintouch" src="./Buttons/Type=Default.svg" alt="Get in Touch Button">
+        <a class="navigation__container__button" href="#about-me">About</a>
+        <a class="navigation__container__button" href="#projects">Projects</a>
+        <img class="navigation__container__button-getintouch" src="./Buttons/Type=Default.svg" alt="Get in Touch Button"
+            href="#footer">
     </nav>
-    <!-- give these ids to go to specific places in the page
-    make sure this is unset -->
 
     <header>
         <div class="header--text">
@@ -30,7 +29,7 @@
     </header>
 
     <main>
-        <div class="main">
+        <div id="about-me" class="main">
             <h3 class="main__title--1">About me</h3>
             <div class="main__image">
                 <img src="images/self.jpg" alt="An animation of my websites">
@@ -78,7 +77,7 @@
             </div>
         </section>
 
-        <section class="project-container">
+        <section id="projects" class="project-container">
             <img class="project-container--item" src="./project card/Project Card.svg" alt="Project card">
             <img class="project-container--item" src="./project card/Project Card.svg" alt="Project card">
             <img class="project-container--item" src="./project card/Project Card.svg" alt="Project card">
@@ -88,12 +87,17 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <a class="footer__email" href="">shivaniganatra@live.com</a>
-
+    <footer id="footer" class="footer">
+        <a class="footer__email"
+            href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=22&ct=1709713454&rver=7.0.67
+            38.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f0%2f%3fstate%3d1%26redirec
+            tTo%3daHR0cHM6Ly9vdXRsb29rLmxpdmUuY29tL21haWwvMC8%26RpsCsrfState%3d4c9e3ce3-17de-9f28-abc0-dbb3
+            ae996d53&id=292841&aadredir=1&whr=live.com&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=90015"
+        >shivaniganatra@live.com</a>
         <div class="footer__icons">
             <img class="footer__icon--cv" src="./footer icons/CV.svg" alt="CV icon">
-            <img class="footer__icon--Github" src="./footer icons/GitHub.svg" alt="Git Hub icon">
+            <img class="footer__icon--Github" src="./footer icons/GitHub.svg" alt="Git Hub icon"
+                href="https://github.com/ShivaniGanatra?tab=repositories">
             <img class="footer__icon--Linkedin" src="./footer icons/Linkedin.svg" alt="Linkedin icon">
         </div>
 

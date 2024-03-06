@@ -78,27 +78,6 @@ header {
     }
 }
 
-.technical-skill-icon-container {
-    display: grid;
-    grid-template-rows: 122px 122px 122px;
-    grid-template-columns: 122px 122px 122px;
-    padding: 100px;
-    justify-content: center;
-}
-
-.project-container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 70px;
-    padding-bottom: 100px;
-    align-items: center;
-
-    &--item {
-        width: 373px;
-    }
-}
-
 .footer {
     background-color: $tertiary-color;
     height: 216px;
@@ -114,9 +93,6 @@ header {
         margin: 0;
     }
 }
-
-
-
 
 @media screen and (min-width:768px) {
 
@@ -156,17 +132,6 @@ header {
         }
     }
 
-    .project-container {
-        justify-content: center;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 10px;
-        justify-content: center;
-        padding-left: 60px;
-
-    }
-
     .footer {
         background-color: $tertiary-color;
         height: 216px;
@@ -184,31 +149,6 @@ header {
 
 @media screen and (min-width:1440px) {
 
-    .technical-skill-icon-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-
-    .navigation__container {
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: row;
-        align-items: flex-end;
-
-        &__button {
-            text-decoration: none;
-            background-color: $primary-color;
-            color: $tertiary-color;
-            padding: 11px 25px;
-            border: $primary-color solid 2px;
-            border-radius: 4px;
-            flex-direction: column;
-        }
-    }
-
     footer {
         background-color: $tertiary-color;
         height: 155px;
@@ -216,7 +156,5 @@ header {
         justify-content: space-between;
         flex-direction: row;
         padding: 100px;
-
-
     }
 }
