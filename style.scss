@@ -86,6 +86,7 @@ header {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
+    color: $primary-color;
 
     &__icons {
         display: flex;

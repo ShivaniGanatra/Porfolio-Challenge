@@ -133,6 +133,7 @@ header img {
   flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 .footer__icons {
   display: flex;

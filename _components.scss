@@ -40,33 +40,37 @@
 
         &__button {
             text-decoration: none;
-            color: black;
+            color: $secondary-color;
             padding: 11px 25px;
             border-radius: 4px;
             flex-direction: column;
         }
-    }
 
-    @media screen and (min-width:1440px) {
-        .technical-skill-icon-container {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
+        &__button--projects:hover {
+            background-color: aquamarine;
         }
 
-        .navigation__container {
-            display: flex;
-            justify-content: flex-end;
-            flex-direction: row;
-            align-items: flex-end;
+        @media screen and (min-width:1440px) {
+            .technical-skill-icon-container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
 
-            &__button {
-                text-decoration: none;
-                color: black;
-                padding: 11px 25px;
-                flex-direction: column;
+            .navigation__container {
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: row;
+                align-items: flex-end;
+
+                &__button {
+                    text-decoration: none;
+                    color: $tertiary-color;
+                    padding: 11px 25px;
+                    flex-direction: column;
+                }
+
             }
         }
     }
-}
