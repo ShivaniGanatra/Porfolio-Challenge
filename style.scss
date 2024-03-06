@@ -97,7 +97,6 @@ header {
 @media screen and (min-width:768px) {
 
     .navigation__container {
-        border: 2px solid white;
         display: flex;
         justify-content: flex-end;
         flex-direction: row;
@@ -136,8 +135,8 @@ header {
         background-color: $tertiary-color;
         height: 216px;
         display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
 
         &__email {
