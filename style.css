@@ -27,10 +27,10 @@
   transition: fill 0.3s ease;
 }
 .technical-skill-icons__icon:nth-child(odd):hover path {
-  fill: #f4d2ff;
+  fill: #cdb3ff;
 }
 .technical-skill-icons__icon:nth-child(even) path {
-  fill: #f4d2ff;
+  fill: #cdb3ff;
   transition: fill 0.3s ease;
 }
 .technical-skill-icons__icon:nth-child(even):hover path {
@@ -93,7 +93,6 @@
   .projects__center {
     display: flex;
     justify-content: center;
-    background-color: green;
   }
   .technical-skill-icons {
     display: flex;
@@ -155,7 +154,6 @@
     display: flex;
     justify-content: center;
     width: 1440px;
-    background-color: green;
     padding: 50px;
   }
   .project-container {
@@ -258,7 +256,7 @@
   fill: rgb(240, 232, 255);
 }
 .footer__icon--cv-icon rect {
-  fill: #f4d2ff;
+  fill: #cdb3ff;
   transition: fill 0.3s ease;
 }
 .footer__icon--cv-icon path {
@@ -272,7 +270,7 @@
   fill: rgb(240, 232, 255);
 }
 .footer__icon--linkedin-icon {
-  fill: #f4d2ff;
+  fill: #cdb3ff;
   transition: fill 0.3s ease;
 }
 .footer__icon--linkedin-icon:hover {
