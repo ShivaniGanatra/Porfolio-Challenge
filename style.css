@@ -4,11 +4,13 @@
   align-items: center;
 }
 .card__header {
-  padding: 0px;
+  padding: 30px 20px 30px 20px;
   font-size: 30px;
+  color: rgb(190, 99, 255);
 }
 .card__paragrah {
-  padding: 0px;
+  padding: 15px 30px 15px 30px;
+  color: rgb(199, 147, 238);
 }
 
 .technical-skill-icons {
@@ -39,8 +41,10 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  gap: 70px;
+  gap: 50px;
   align-items: center;
+  padding: 10px;
+  max-width: 425px;
 }
 .project-container__item {
   border: 15px solid rgb(240, 232, 255);
@@ -51,12 +55,13 @@
 }
 .project-container__buttons {
   background-color: rgb(218, 181, 255);
+  display: flex;
 }
 .project-container__button {
   border: 2px solid rgb(190, 99, 255);
   border-radius: 10px;
-  width: 120px;
-  height: 50px;
+  width: 90px;
+  height: 40px;
   margin: 10px;
   color: rgb(199, 147, 238);
   background-color: rgb(240, 232, 255);
@@ -76,22 +81,45 @@
   color: rgb(199, 147, 238);
 }
 .project-container__text--sub-title {
-  font-size: 40px;
+  font-size: 35px;
   color: rgb(190, 99, 255);
 }
 .project-container__text--paragraph {
+  font-size: 12px;
   color: rgb(190, 99, 255);
 }
 
 @media screen and (min-width: 768px) {
-  .project-container {
+  .projects__center {
+    display: flex;
     justify-content: center;
+    background-color: green;
+  }
+  .technical-skill-icons {
+    display: flex;
+    width: 768px;
+  }
+  .technical-skill-icons__icon {
+    width: 100px;
+    height: 100px;
+  }
+  .project-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 10px;
-    justify-content: center;
-    padding-left: 0px;
+    padding: 0px;
+    margin: 10px;
+    gap: 7px;
+    max-width: 768px;
+    justify-items: center;
+  }
+  .project-container__item {
+    border: 10px solid rgb(240, 232, 255);
+    border-radius: 15px;
+    width: 100%;
+  }
+  .project-container__img {
+    width: 100%;
   }
   .navigation-container {
     display: flex;
@@ -110,24 +138,33 @@
     background-color: aquamarine;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 1440px) {
-  .navigation-container .technical-skills-icons {
+@media screen and (min-width: 1440px) {
+  .technical-skills-icons {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
-  .navigation-container .navigation-container {
+  .navigation-container {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
     align-items: flex-end;
   }
-  .navigation-container__button {
-    text-decoration: none;
-    color: pink;
-    padding: 11px 25px;
-    flex-direction: column;
+  .projects__center {
+    display: flex;
+    justify-content: center;
+    width: 1440px;
+    background-color: green;
+    padding: 50px;
+  }
+  .project-container {
+    max-width: 1440px;
+    display: grid;
+    gap: 20px;
+  }
+  .project-container__item {
+    width: 405px;
   }
 }
 * {
@@ -136,7 +173,6 @@
   margin: 0px;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: white;
 }
 
 .navigation-container {
@@ -150,16 +186,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0px;
+  padding: 30px 10px 30px 10px;
   color: rgb(190, 99, 255);
 }
 .header__title {
-  padding: 0px;
+  padding: 25px 10px 25px 10px;
   text-align: center;
 }
 .header__sub-title {
   font-size: 60px;
-  padding: 0px;
   text-align: center;
 }
 .header__image {
@@ -173,6 +208,8 @@
   display: flex;
   justify-content: center;
   padding: 0px;
+  padding: 10px 20px 10px 20px;
+  font-size: 25px;
 }
 .main__title--2 {
   display: none;
@@ -183,13 +220,13 @@
   padding: 0px;
 }
 .main__paragraph--paragraph--1 {
-  padding: 0px;
+  padding: 30px;
 }
 
 .footer {
   background-color: white;
   height: 216px;
-  padding: 0px;
+  padding: 50px;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;

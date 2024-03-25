@@ -7,7 +7,6 @@
     margin: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: $primary-color;
 }
 
 .navigation-container {
@@ -21,17 +20,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0px;
+    padding: 30px 10px 30px 10px;
     color: $septenary-color;
 
     &__title {
-        padding: 0px;
+        padding: 25px 10px 25px 10px;
         text-align: center;
     }
 
     &__sub-title {
         font-size: 60px;
-        padding: 0px;
         text-align: center;
     }
 
@@ -41,13 +39,15 @@
 }
 
 .main {
-
+    
     color: $senary-color;
 
     &__title--1 {
         display: flex;
         justify-content: center;
         padding: 0px;
+        padding: 10px 20px 10px 20px;
+        font-size: 25px;
     }
 
     &__title--2 {
@@ -61,7 +61,7 @@
     }
 
     &__paragraph--paragraph--1 {
-        padding: 0px;
+        padding: 30px;
     }
 }
 
@@ -70,7 +70,7 @@
 .footer {
     background-color: $primary-color;
     height: 216px;
-    padding: 0px;
+    padding: 50px;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -95,6 +95,7 @@
 .footer__icon {
     width: 60px;
     height: 60px;
+    
 
 
     &--github-icon {
@@ -138,8 +139,6 @@
         fill: $quinary-color;
     }
 }
-
-
 
 @media screen and (min-width:768px) {
 
