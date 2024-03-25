@@ -1,4 +1,4 @@
-.technical-skill-icon-container {
+.technical-skills-icons {
   display: grid;
   grid-template-rows: 122px 122px 122px;
   grid-template-columns: 122px 122px 122px;
@@ -6,16 +6,60 @@
   justify-content: center;
 }
 
+.project-container__item {
+  border: 15px solid rgb(240, 232, 255);
+  border-radius: 20px;
+}
+
+.project-container__img {
+  width: 100%;
+}
+
+.project-container__buttons {
+  background-color: rgb(218, 181, 255);
+}
+
+.project-container__button {
+  border: 2px solid rgb(190, 99, 255);
+  border-radius: 10px;
+  width: 120px;
+  height: 50px;
+  margin: 10px;
+  color: rgb(199, 147, 238);
+  background-color: rgb(240, 232, 255);
+  transition: 0.3s ease;
+}
+
+.project-container__button:hover {
+  background-color: rgb(199, 147, 238);
+  color: rgb(240, 232, 255);
+  border: 2px solid white;
+}
+
 .project-container {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   gap: 70px;
+  padding: 30px;
   padding-bottom: 100px;
   align-items: center;
 }
-.project-container--item {
-  width: 373px;
+
+.project-container__text {
+  padding: 10px;
+  background-color: rgb(240, 232, 255);
+}
+.project-container__text--title {
+  font-size: 20px;
+  color: rgb(199, 147, 238);
+}
+.project-container__text--sub-title {
+  font-size: 40px;
+  color: rgb(190, 99, 255);
+}
+.project-container__text--paragraph {
+  color: rgb(190, 99, 255);
 }
 
 @media screen and (min-width: 768px) {
@@ -28,36 +72,39 @@
     justify-content: center;
     padding-left: 60px;
   }
-  .navigation__container {
+  .navigation-container {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
     align-items: flex-end;
   }
-  .navigation__container__button {
+  .navigation-container__button {
     text-decoration: none;
-    color: black;
+    color: pink;
     padding: 11px 25px;
     border-radius: 4px;
     flex-direction: column;
   }
+  .navigation-container__button--projects:hover {
+    background-color: aquamarine;
+  }
 }
 @media screen and (min-width: 768px) and (min-width: 1440px) {
-  .technical-skill-icon-container {
+  .navigation-container .technical-skills-icons {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
-  .navigation__container {
+  .navigation-container .navigation-container {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
     align-items: flex-end;
   }
-  .navigation__container__button {
+  .navigation-container__button {
     text-decoration: none;
-    color: black;
+    color: pink;
     padding: 11px 25px;
     flex-direction: column;
   }
@@ -68,34 +115,39 @@
   margin: 0px;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
 }
 
-nav {
+.navigation-container {
   display: none;
 }
 
-header {
+.header {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 50px;
+  color: rgb(190, 99, 255);
 }
-header h1 {
+.header__title {
   padding: 50px;
   text-align: center;
 }
-header h2 {
+.header__sub-title {
   font-size: 60px;
   padding: 30px;
   text-align: center;
 }
-header img {
+.header__image {
   display: none;
 }
 
+.main {
+  color: rgb(199, 147, 238);
+}
 .main__title--1 {
   display: flex;
   justify-content: center;
@@ -113,32 +165,87 @@ header img {
   padding: 50px;
 }
 
-.card .card__header {
+.card__header {
   display: flex;
   justify-content: center;
   padding: 50px;
   font-size: 30px;
 }
-.card .card__paragrah {
+.card__paragrah {
   display: flex;
   justify-content: center;
   padding: 50px;
 }
 
 .footer {
-  background-color: black;
+  background-color: white;
   height: 216px;
   padding: 30px;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
-  color: white;
+}
+.footer__email {
+  color: rgb(190, 99, 255);
+  padding: 35px;
 }
 .footer__icons {
   display: flex;
   padding: 0;
   margin: 0;
+  gap: 10px;
+  background-color: white;
+}
+
+.footer__icon {
+  width: 60px;
+  height: 60px;
+}
+.footer__icon--github-icon {
+  fill: rgb(199, 147, 238);
+  width: 70px;
+  height: 70px;
+  transition: fill 0.3s ease;
+}
+.footer__icon--github-icon:hover {
+  fill: rgb(240, 232, 255);
+}
+.footer__icon--cv-icon rect {
+  fill: #f4d2ff;
+  transition: fill 0.3s ease;
+}
+.footer__icon--cv-icon path {
+  fill: rgb(199, 147, 238);
+  transition: fill 0.3s ease;
+}
+.footer__icon--cv-icon:hover rect {
+  fill: rgb(218, 181, 255);
+}
+.footer__icon--cv-icon:hover path {
+  fill: rgb(240, 232, 255);
+}
+.footer__icon--linkedin-icon {
+  fill: #f4d2ff;
+  transition: fill 0.3s ease;
+}
+.footer__icon--linkedin-icon:hover {
+  fill: rgb(218, 181, 255);
+}
+
+.technical-skill-icons__icon:nth-child(odd) path {
+  fill: rgb(199, 147, 238);
+  transition: fill 0.3s ease;
+}
+.technical-skill-icons__icon:nth-child(odd):hover path {
+  fill: #f4d2ff;
+}
+.technical-skill-icons__icon:nth-child(even) path {
+  fill: #f4d2ff;
+  transition: fill 0.3s ease;
+}
+.technical-skill-icons__icon:nth-child(even):hover path {
+  fill: rgb(190, 99, 255);
 }
 
 @media screen and (min-width: 768px) {
@@ -148,11 +255,11 @@ header img {
     flex-direction: row;
     align-items: flex-end;
   }
-  header {
+  .header {
     display: flex;
     flex-direction: row;
   }
-  header img {
+  .header__img {
     display: block;
   }
   .main {
@@ -170,7 +277,7 @@ header img {
     flex-grow: 2;
   }
   .footer {
-    background-color: black;
+    background-color: white;
     height: 216px;
     display: flex;
     flex-direction: row;
@@ -178,13 +285,13 @@ header img {
     align-items: center;
   }
   .footer__email {
-    color: white;
+    color: rgb(190, 99, 255);
     padding: 35px;
   }
 }
 @media screen and (min-width: 1440px) {
-  footer {
-    background-color: black;
+  .footer {
+    background-color: white;
     height: 155px;
     display: flex;
     justify-content: space-between;

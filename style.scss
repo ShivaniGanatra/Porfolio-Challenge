@@ -7,38 +7,42 @@
     margin: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: $primary-color;
 }
 
-nav {
+.navigation-container {
     display: none;
 }
 
-header {
+.header {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 10px;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 50px;
+    color: $septenary-color;
 
-    h1 {
+    &__title {
         padding: 50px;
         text-align: center;
     }
 
-    h2 {
+    &__sub-title {
         font-size: 60px;
         padding: 30px;
         text-align: center;
     }
 
-    img {
+    &__image {
         display: none;
     }
 }
 
 .main {
+
+    color: $senary-color;
 
     &__title--1 {
         display: flex;
@@ -63,14 +67,14 @@ header {
 
 .card {
 
-    .card__header {
+    &__header {
         display: flex;
         justify-content: center;
         padding: 50px;
         font-size: 30px;
     }
 
-    .card__paragrah {
+    &__paragrah {
 
         display: flex;
         justify-content: center;
@@ -79,19 +83,95 @@ header {
 }
 
 .footer {
-    background-color: $tertiary-color;
+    background-color: $primary-color;
     height: 216px;
     padding: 30px;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    color: $primary-color;
+
+    &__email {
+        color: $septenary-color;
+        padding: 35px;
+    }
+
 
     &__icons {
         display: flex;
         padding: 0;
         margin: 0;
+        gap: 10px;
+        background-color: $primary-color;
+    }
+
+}
+
+.footer__icon {
+    width: 60px;
+    height: 60px;
+
+
+    &--github-icon {
+        fill: $senary-color;
+        width: 70px;
+        height: 70px;
+        transition: fill 0.3s ease;
+    }
+
+    &--github-icon:hover {
+        fill: $secondary-color;
+    }
+
+    &--cv-icon rect {
+        fill: $tertiary-color;
+        transition: fill 0.3s ease;
+
+    }
+
+    &--cv-icon path {
+        fill: $senary-color;
+        transition: fill 0.3s ease;
+
+    }
+
+    &--cv-icon:hover rect {
+        fill: $quinary-color;
+    }
+
+    &--cv-icon:hover path {
+        fill: $secondary-color;
+
+    }
+
+    &--linkedin-icon {
+        fill: $tertiary-color;
+        transition: fill 0.3s ease;
+    }
+
+    &--linkedin-icon:hover {
+        fill: $quinary-color;
+    }
+}
+
+.technical-skill-icons {
+
+    &__icon:nth-child(odd) path {
+        fill: $senary-color;
+        transition: fill 0.3s ease;
+    }
+    
+    &__icon:nth-child(odd):hover path {
+        fill: $tertiary-color;
+    }
+    
+    &__icon:nth-child(even) path {
+        fill: $tertiary-color;
+        transition: fill 0.3s ease;
+    }
+    
+    &__icon:nth-child(even):hover path {
+        fill: $septenary-color;
     }
 }
 
@@ -104,8 +184,8 @@ header {
         align-items: flex-end;
     }
 
-    header {
-        img {
+    .header {
+        &__img {
             display: block;
         }
 
@@ -133,7 +213,7 @@ header {
     }
 
     .footer {
-        background-color: $tertiary-color;
+        background-color: $primary-color;
         height: 216px;
         display: flex;
         flex-direction: row;
@@ -141,7 +221,7 @@ header {
         align-items: center;
 
         &__email {
-            color: $primary-color;
+            color: $septenary-color;
             padding: 35px;
         }
     }
@@ -149,8 +229,8 @@ header {
 
 @media screen and (min-width:1440px) {
 
-    footer {
-        background-color: $tertiary-color;
+    .footer {
+        background-color: $primary-color;
         height: 155px;
         display: flex;
         justify-content: space-between;
