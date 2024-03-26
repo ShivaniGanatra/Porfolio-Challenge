@@ -1,6 +1,10 @@
 @use"./variables.scss" as*;
 @use"./components.scss";
 
+html {
+    scroll-behavior: smooth;
+  }
+
 * {
     padding: 0;
     border: 0;

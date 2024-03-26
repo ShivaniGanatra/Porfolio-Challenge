@@ -44,6 +44,8 @@
 .projects-center__title {
   color: rgb(190, 99, 255);
   font-size: 30px;
+  text-align: center;
+  padding: 40px;
 }
 
 .project-container {
@@ -52,7 +54,7 @@
   flex-direction: column;
   gap: 50px;
   align-items: center;
-  padding: 4px;
+  padding: 12px;
   max-width: 425px;
 }
 .project-container__item {
@@ -146,8 +148,9 @@
     justify-content: flex-end;
     flex-direction: row;
     align-items: flex-end;
-    padding: 20px;
+    padding: 20px 20px 5px 20px;
     font-size: 13px;
+    gap: 5px;
   }
   .navigation-container__link {
     text-decoration: none;
@@ -155,6 +158,10 @@
     padding: 11px 25px;
     border-radius: 4px;
     flex-direction: column;
+    transition: ease 0.3s;
+  }
+  .navigation-container__link:hover {
+    border: 2px rgb(199, 147, 238) dashed;
   }
   .navigation-container__button {
     padding: 11px 25px;
@@ -199,6 +206,10 @@
     width: 405px;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0;
   border: 0;
