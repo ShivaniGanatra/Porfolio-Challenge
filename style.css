@@ -139,17 +139,36 @@
     font-size: 30px;
   }
   .navigation-container {
+    background-color: white;
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
     align-items: flex-end;
+    padding: 20px;
+    font-size: 13px;
   }
-  .navigation-container__button {
+  .navigation-container__link {
     text-decoration: none;
-    color: pink;
+    color: rgb(190, 99, 255);
     padding: 11px 25px;
     border-radius: 4px;
     flex-direction: column;
+  }
+  .navigation-container__button {
+    padding: 11px 25px;
+    background-color: rgb(240, 232, 255);
+    border: 2px rgb(199, 147, 238) solid;
+    border-radius: 5px;
+    color: rgb(190, 99, 255);
+    font-size: 13px;
+    font-weight: bolder;
+    transition: 0.3s ease;
+  }
+  .navigation-container__button:hover {
+    background-color: rgb(218, 181, 255);
+    color: white;
   }
 }
 @media screen and (min-width: 1440px) {
