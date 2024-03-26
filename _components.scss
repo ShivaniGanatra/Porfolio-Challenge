@@ -1,6 +1,8 @@
 @use"./variables.scss" as*;
 
-
+.navigation-container {
+    display: none;
+}
 
 .card {
 
@@ -48,13 +50,18 @@
     }
 }
 
+.projects-center__title {
+    color: $septenary-color;
+    font-size: 30px;
+}
+
 .project-container {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     gap: 50px;
     align-items: center;
-    padding: 10px;
+    padding: 4px;
     max-width: 425px;
 
     &__item {
@@ -89,7 +96,7 @@
     }
 
     &__text {
-        padding: 10px;
+        padding: 4px;
         background-color: $secondary-color;
 
         &--title {
@@ -112,11 +119,17 @@
 @media screen and (min-width:768px) {
 
 
-    .projects__center {
+    .projects-center {
         display: flex;
-        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+        &__title{
+            color: green;
+            font-size: 40px;
+            padding: 30px;
 
-        
+        }
     }
 
     .technical-skill-icons {
@@ -149,6 +162,10 @@
             width: 100%;
         }
 
+        &__text--sub-title{
+          font-size: 30px;  
+        }
+
     }
 
     .navigation-container {
@@ -163,10 +180,6 @@
             padding: 11px 25px;
             border-radius: 4px;
             flex-direction: column;
-        }
-
-        &__button--projects:hover {
-            background-color: aquamarine;
         }
     }
 
