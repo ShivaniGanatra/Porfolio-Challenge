@@ -41,6 +41,12 @@
   fill: rgb(190, 99, 255);
 }
 
+#projects {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 40px;
+}
+
 .projects-center__title {
   color: rgb(190, 99, 255);
   font-size: 30px;
