@@ -3,7 +3,7 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 * {
     padding: 0;
@@ -26,18 +26,13 @@ html {
         display: none;
     }
 
-    &__text {
+    &__title {
+        padding: 25px 10px 25px 10px;
+        font-size: 16px;
+    }
 
-        &--title {
-            padding: 25px 10px 25px 10px;
-
-            font-size: 16px;
-        }
-
-        &--sub-title {
-            font-size: 45px;
-
-        }
+    &__sub-title {
+        font-size: 45px;
     }
 }
 
@@ -60,7 +55,7 @@ html {
     }
 
     &__image {
-       width: 85%; 
+        width: 85%;
         padding: 15px;
     }
 
@@ -69,8 +64,6 @@ html {
         font-size: 12px;
     }
 }
-
-
 
 .footer {
     background-color: $primary-color;
@@ -85,7 +78,6 @@ html {
         color: $septenary-color;
         padding: 35px;
     }
-
 
     &__icons {
         display: flex;
@@ -149,12 +141,18 @@ html {
 
 @media screen and (min-width:768px) {
 
+    #home {
+        width: fit-content;
+        height: 50px;
+    }
+
     .navigation__container {
         display: block;
     }
 
     .header {
         padding: 30px 60px 40px 60px;
+        text-align: start;
 
         &__image {
             display: block;
@@ -164,16 +162,12 @@ html {
 
         display: flex;
         flex-direction: row;
-
-        &__text {
-            text-align: start;
-        }
     }
 
     .main {
         display: flex;
         flex-direction: row;
-        padding:50px ;
+        padding: 50px;
 
         &__title--1 {
             display: none;
@@ -182,12 +176,6 @@ html {
         &__title--2 {
             display: block;
             padding: 15px;
-            
-        }
-
-
-        &__image {
-            flex-grow: 2;
         }
     }
 
@@ -208,12 +196,44 @@ html {
 
 @media screen and (min-width:1440px) {
 
+    .header {
+        padding: 0px 130px 0px 130px;
+
+        &__sub-title {
+            font-size: 45px;
+        }
+
+        &__image {
+            width: 400px;
+        }
+    }
+
+
+
+    .main {
+        padding: 100px;
+
+        &__image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        &__title--2 {
+
+            font-size: 36px;
+        }
+
+        &__paragraph {
+            padding: 10px 15px 10px 15px;
+            font-size: 20px;
+        }
+    }
+
     .footer {
         background-color: $primary-color;
         height: 155px;
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        padding: 100px;
     }
 }

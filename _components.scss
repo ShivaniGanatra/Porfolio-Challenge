@@ -4,11 +4,13 @@
     display: none;
 }
 
-.card {
+.technical-skills-card {
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
 
     &__header {
         padding: 30px 20px 30px 20px;
@@ -16,9 +18,11 @@
         color: $septenary-color;
     }
 
-    &__paragrah {
+    &__paragraph {
         padding: 15px 30px 15px 30px;
         color: $senary-color;
+        text-align: center;
+        width: 100%;
     }
 }
 
@@ -62,7 +66,7 @@
     padding: 40px;
 }
 
-.project-container {
+.project-containers {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -70,110 +74,60 @@
     align-items: center;
     padding: 12px;
     max-width: 425px;
-
-    &__item {
-        border: 15px solid $secondary-color;
-        border-radius: 20px;
-    }
-
-    &__img {
-        width: 100%;
-    }
-
-    &__buttons {
-        background-color: $quinary-color;
-        display: flex;
-    }
-
-    &__button {
-        border: 2px solid $septenary-color;
-        border-radius: 10px;
-        width: 90px;
-        height: 40px;
-        margin: 10px;
-        color: $senary-color;
-        background-color: $secondary-color;
-        transition: 0.3s ease;
-    }
-
-    &__button:hover {
-        background-color: $senary-color;
-        color: $secondary-color;
-        border: 2px solid $primary-color;
-    }
-
-    &__text {
-        padding: 4px;
-        background-color: $secondary-color;
-
-        &--title {
-            font-size: 20px;
-            color: $senary-color;
-        }
-
-        &--sub-title {
-            font-size: 35px;
-            color: $septenary-color;
-        }
-
-        &--paragraph {
-            font-size: 12px;
-            color: $septenary-color;
-        }
-    }
 }
 
-@media screen and (min-width:768px) {
-
-
-    .projects-center {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-
-        &__title {
-            color: green;
-            font-size: 40px;
-            padding: 30px;
-
-        }
-    }
-
-    .technical-skill-icons {
-        display: flex;
-        width: 768px;
-    }
-
-    .technical-skill-icons__icon {
-        width: 100px;
-        height: 100px;
-    }
-
     .project-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        padding: 0px;
-        margin: 10px;
-        gap: 7px;
-        max-width: 768px;
-        justify-items: center;
-
-        &__item {
-            border: 10px solid $secondary-color;
-            border-radius: 15px;
-            width: 100%;
-        }
+        border: 15px solid $secondary-color;
+        border-radius: 20px;
 
         &__img {
             width: 100%;
         }
-
-        &__text--sub-title {
-            font-size: 30px;
+    
+        &__buttons {
+            background-color: $quinary-color;
+            display: flex;
         }
-
+    
+        &__button {
+            border: 2px solid $septenary-color;
+            border-radius: 10px;
+            width: 90px;
+            height: 40px;
+            margin: 10px;
+            color: $senary-color;
+            background-color: $secondary-color;
+            transition: 0.3s ease;
+        }
+    
+        &__button:hover {
+            background-color: $senary-color;
+            color: $secondary-color;
+            border: 2px solid $primary-color;
+        }
+    
+        &__text {
+            padding: 4px;
+            background-color: $secondary-color;
+    
+            &--title {
+                font-size: 20px;
+                color: $senary-color;
+            }
+    
+            &--sub-title {
+                font-size: 35px;
+                color: $septenary-color;
+            }
+    
+            &--paragraph {
+                font-size: 12px;
+                color: $septenary-color;
+            }
+        }
     }
+
+@media screen and (min-width:768px) {
 
     .navigation-container {
         background-color: $primary-color;
@@ -198,8 +152,8 @@
 
         &__link:hover {
             border: 2px $senary-color dashed;
+            color: darken($color: $senary-color, $amount: 25);
         }
-
 
         &__button {
             padding: 11px 25px;
@@ -217,25 +171,73 @@
             color: $primary-color;
         }
 
+    }
 
+    .technical-skill-icons {
+        display: flex;
+        width: 768px;
+
+        &__icon {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .projects-center {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        &__title {
+            color: $septenary-color;
+            font-size: 40px;
+            padding: 30px;
+
+        }
+    }
+
+    .project-containers {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 0px;
+        margin: 10px;
+        gap: 7px;
+        max-width: 768px;
+        justify-items: center;
+
+    }
+
+    .project-container {
+        border: 10px solid $secondary-color;
+        border-radius: 15px;
+        width: 100%;
+
+        &__img {
+            width: 100%;
+        }
+    
+        &__text--sub-title {
+            font-size: 30px;
+        }
     }
 
 }
 
 @media screen and (min-width:1440px) {
 
-    .technical-skills-icons {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
     .navigation-container {
         display: flex;
         justify-content: flex-end;
         flex-direction: row;
         align-items: flex-end;
+    }
+
+    .technical-skills-icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
 
     .projects__center {
@@ -245,15 +247,13 @@
         padding: 50px;
     }
 
-    .project-container {
+    .project-containers {
         max-width: 1440px;
         display: grid;
         gap: 20px;
-
     }
 
-    .project-container__item {
+    .project-container {
         width: 405px;
     }
-
 }

@@ -2,19 +2,22 @@
   display: none;
 }
 
-.card {
+.technical-skills-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
-.card__header {
+.technical-skills-card__header {
   padding: 30px 20px 30px 20px;
   font-size: 30px;
   color: rgb(190, 99, 255);
 }
-.card__paragrah {
+.technical-skills-card__paragraph {
   padding: 15px 30px 15px 30px;
   color: rgb(199, 147, 238);
+  text-align: center;
+  width: 100%;
 }
 
 .technical-skill-icons {
@@ -54,7 +57,7 @@
   padding: 40px;
 }
 
-.project-container {
+.project-containers {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -63,7 +66,8 @@
   padding: 12px;
   max-width: 425px;
 }
-.project-container__item {
+
+.project-container {
   border: 15px solid rgb(240, 232, 255);
   border-radius: 20px;
 }
@@ -107,45 +111,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .projects-center {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  .projects-center__title {
-    color: green;
-    font-size: 40px;
-    padding: 30px;
-  }
-  .technical-skill-icons {
-    display: flex;
-    width: 768px;
-  }
-  .technical-skill-icons__icon {
-    width: 100px;
-    height: 100px;
-  }
-  .project-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding: 0px;
-    margin: 10px;
-    gap: 7px;
-    max-width: 768px;
-    justify-items: center;
-  }
-  .project-container__item {
-    border: 10px solid rgb(240, 232, 255);
-    border-radius: 15px;
-    width: 100%;
-  }
-  .project-container__img {
-    width: 100%;
-  }
-  .project-container__text--sub-title {
-    font-size: 30px;
-  }
   .navigation-container {
     background-color: white;
     position: sticky;
@@ -168,6 +133,7 @@
   }
   .navigation-container__link:hover {
     border: 2px rgb(199, 147, 238) dashed;
+    color: #8e25dd;
   }
   .navigation-container__button {
     padding: 11px 25px;
@@ -183,19 +149,58 @@
     background-color: rgb(218, 181, 255);
     color: white;
   }
+  .technical-skill-icons {
+    display: flex;
+    width: 768px;
+  }
+  .technical-skill-icons__icon {
+    width: 100px;
+    height: 100px;
+  }
+  .projects-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .projects-center__title {
+    color: rgb(190, 99, 255);
+    font-size: 40px;
+    padding: 30px;
+  }
+  .project-containers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0px;
+    margin: 10px;
+    gap: 7px;
+    max-width: 768px;
+    justify-items: center;
+  }
+  .project-container {
+    border: 10px solid rgb(240, 232, 255);
+    border-radius: 15px;
+    width: 100%;
+  }
+  .project-container__img {
+    width: 100%;
+  }
+  .project-container__text--sub-title {
+    font-size: 30px;
+  }
 }
 @media screen and (min-width: 1440px) {
-  .technical-skills-icons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
   .navigation-container {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
     align-items: flex-end;
+  }
+  .technical-skills-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
   .projects__center {
     display: flex;
@@ -203,12 +208,12 @@
     width: 1440px;
     padding: 50px;
   }
-  .project-container {
+  .project-containers {
     max-width: 1440px;
     display: grid;
     gap: 20px;
   }
-  .project-container__item {
+  .project-container {
     width: 405px;
   }
 }
@@ -236,11 +241,11 @@ html {
 .header__image {
   display: none;
 }
-.header__text--title {
+.header__title {
   padding: 25px 10px 25px 10px;
   font-size: 16px;
 }
-.header__text--sub-title {
+.header__sub-title {
   font-size: 45px;
 }
 
@@ -326,11 +331,17 @@ html {
 }
 
 @media screen and (min-width: 768px) {
+  #home {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 50px;
+  }
   .navigation__container {
     display: block;
   }
   .header {
     padding: 30px 60px 40px 60px;
+    text-align: start;
     display: flex;
     flex-direction: row;
   }
@@ -338,9 +349,6 @@ html {
     display: block;
     width: 240px;
     height: auto;
-  }
-  .header__text {
-    text-align: start;
   }
   .main {
     display: flex;
@@ -353,9 +361,6 @@ html {
   .main__title--2 {
     display: block;
     padding: 15px;
-  }
-  .main__image {
-    flex-grow: 2;
   }
   .footer {
     background-color: white;
@@ -371,12 +376,34 @@ html {
   }
 }
 @media screen and (min-width: 1440px) {
+  .header {
+    padding: 0px 130px 0px 130px;
+  }
+  .header__sub-title {
+    font-size: 45px;
+  }
+  .header__image {
+    width: 400px;
+  }
+  .main {
+    padding: 100px;
+  }
+  .main__image {
+    max-width: 100%;
+    height: auto;
+  }
+  .main__title--2 {
+    font-size: 36px;
+  }
+  .main__paragraph {
+    padding: 10px 15px 10px 15px;
+    font-size: 20px;
+  }
   .footer {
     background-color: white;
     height: 155px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding: 100px;
   }
 }/*# sourceMappingURL=style.css.map */
