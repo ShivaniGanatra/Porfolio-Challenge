@@ -38,9 +38,3 @@ button.addEventListener("click", () => {
  
 });
 
-{
-    /* <a href="">about me</a>
-<a href="">technical skills</a>
-<a href="">my projects</a>
-<a href="">my contacts</a> */
-}

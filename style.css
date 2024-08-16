@@ -235,6 +235,11 @@ html {
   flex-direction: column;
 }
 
+.burger-menu-nav {
+  position: sticky;
+  top: 0;
+}
+
 .nav__link {
   padding: 10px;
   display: flex;
@@ -255,6 +260,7 @@ html {
   justify-content: center;
   padding: 20px 30px 70px 30px;
   color: rgb(190, 99, 255);
+  background-color: rgb(255, 255, 255);
 }
 .header__image {
   display: none;
@@ -262,32 +268,33 @@ html {
 .header__title {
   padding: 25px 10px 25px 10px;
   font-size: 16px;
+  height: 20px;
 }
 .header__sub-title {
   font-size: 45px;
 }
 
-.main {
+.about-me {
   color: rgb(199, 147, 238);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main__title--1 {
+.about-me__title--1 {
   display: flex;
   justify-content: center;
   padding: 0px;
   padding: 10px 20px 10px 20px;
   font-size: 20px;
 }
-.main__title--2 {
+.about-me__title--2 {
   display: none;
 }
-.main__image {
+.about-me__image {
   width: 85%;
   padding: 15px;
 }
-.main__paragraph {
+.about-me__paragraph {
   padding: 10px 15px 10px 15px;
   font-size: 12px;
 }
@@ -349,10 +356,8 @@ html {
 }
 
 @media screen and (min-width: 768px) {
-  #home {
-    width: -moz-fit-content;
-    width: fit-content;
-    height: 50px;
+  .burger-menu-nav {
+    display: none;
   }
   .navigation__container {
     display: block;
@@ -368,15 +373,15 @@ html {
     width: 240px;
     height: auto;
   }
-  .main {
+  .about-me {
     display: flex;
     flex-direction: row;
     padding: 50px;
   }
-  .main__title--1 {
+  .about-me__title--1 {
     display: none;
   }
-  .main__title--2 {
+  .about-me__title--2 {
     display: block;
     padding: 15px;
   }
@@ -403,17 +408,17 @@ html {
   .header__image {
     width: 400px;
   }
-  .main {
+  .about-me {
     padding: 100px;
   }
-  .main__image {
+  .about-me__image {
     max-width: 100%;
     height: auto;
   }
-  .main__title--2 {
+  .about-me__title--2 {
     font-size: 36px;
   }
-  .main__paragraph {
+  .about-me__paragraph {
     padding: 10px 15px 10px 15px;
     font-size: 20px;
   }

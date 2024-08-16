@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-
-    
-
 </head>
 
 <body>
@@ -18,44 +15,22 @@
         <a class="navigation-container__link" href="#home">Home</a>
         <a class="navigation-container__link" href="#about-me">About</a>
         <a class="navigation-container__link" href="#projects">Projects</a>
-        <button class="navigation-container__button" href="#contact-info">Get in Touch</button>
+        <a href="#contact-info">
+            <button class="navigation-container__button" href=contact-info">Get in Touch</button>
+        </a>
     </nav>
 
 
-    <nav>
+    <nav class="burger-menu-nav">
         <button class="nav__button">
             <i class="fa fa-bars" style="font-size:48px;color:rgb(201, 135, 255)"></i>
+            <!-- The nav below will include the nav burger menu -->
             <nav class="nav__links"></nav>
         </button>
-        
-        
     </nav>
 
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Sidebar -->
-
-
-
-    <div id="home"></div>
-    <header class="header">
-        <div>
+    <header id="home" class="header">
+        <div class="header__text">
             <h1 class="header__title">Hey I'm Shivani</h1>
             <h2 class="header__sub-title">
                 A Junior software developer based in the UK
@@ -65,14 +40,14 @@
     </header>
 
     <main>
-        <div id="about-me" class="main">
-            <h3 class="main__title--1">About me</h3>
+        <div id="about-me" class="about-me">
+            <h3 class="about-me__title--1">About me</h3>
 
-            <img class="main__image" src="images/self.jpg" alt="An animation of my websites" />
+            <img class="about-me__image" src="images/self.jpg" alt="An animation of my websites" />
 
             <div class="text">
-                <h3 class="main__title--2">About me</h3>
-                <p class="main__paragraph">
+                <h3 class="about-me__title--2">About me</h3>
+                <p class="about-me__paragraph">
                     Nulla ac praesent tempor, orci sit nunc eget. Aliquam urna nunc,
                     viverra sed tortor non. Id at pellentesque mauris at tincidunt
                     venenatis urna mus. Sodales pretium tempus tincidunt tellus in
@@ -80,7 +55,7 @@
                     enim lorem urna, vivamus pulvinar porttitor. Ultrices neque nec
                     feugiat ullamcorper ultricies ante sagittis commodo.
                 </p>
-                <p class="main__paragraph">
+                <p class="about-me__paragraph">
                     Nunc malesuada
                     amet at eget consectetur sit. Nibh in ut diam nulla sed porttitor
                     et. At neque tellus convallis urna, sodales neque. In enim auctor
@@ -225,7 +200,7 @@
             <h5 class="projects-center__title">My Projects</h5>
             <section class="project-containers">
                 <div class="project-container">
-                    <img class="project-container__img" src="./project card/plang .jpeg" alt="">
+                    <img class="project-container__img" src="./images/plang .jpeg" alt="">
                     <div class="project-container__text project-container__text--title">React</div>
                     <div class="project-container__text project-container__text--sub-title">Client Project</div>
                     <p class="project-container__text project-container__text--paragraph">Lorem ipsum dolor sit amet
@@ -238,7 +213,7 @@
                     </div>
                 </div>
                 <div class="project-container">
-                    <img class="project-container__img" src="./project card/plang .jpeg" alt="">
+                    <img class="project-container__img" src="./images/plang .jpeg" alt="">
                     <div class="project-container__text project-container__text--title">React</div>
                     <div class="project-container__text project-container__text--sub-title">Client Project</div>
                     <p class="project-container__text project-container__text--paragraph">Lorem ipsum dolor sit amet
@@ -251,7 +226,7 @@
                     </div>
                 </div>
                 <div class="project-container">
-                    <img class="project-container__img" src="./project card/plang .jpeg" alt="">
+                    <img class="project-container__img" src="./images/plang .jpeg" alt="">
                     <div class="project-container__text project-container__text--title">React</div>
                     <div class="project-container__text project-container__text--sub-title">Client Project</div>
                     <p class="project-container__text project-container__text--paragraph">Lorem ipsum dolor sit amet
@@ -264,7 +239,7 @@
                     </div>
                 </div>
                 <div class="project-container">
-                    <img class="project-container__img" src="./project card/plang .jpeg" alt="">
+                    <img class="project-container__img" src="./images/plang .jpeg" alt="">
                     <div class="project-container__text project-container__text--title">React</div>
                     <div class="project-container__text project-container__text--sub-title">Client Project</div>
                     <p class="project-container__text project-container__text--paragraph">Lorem ipsum dolor sit amet
@@ -277,7 +252,7 @@
                     </div>
                 </div>
                 <div class="project-container">
-                    <img class="project-container__img" src="./project card/plang .jpeg" alt="">
+                    <img class="project-container__img" src="./images/plang .jpeg" alt="">
                     <div class="project-container__text project-container__text--title">React</div>
                     <div class="project-container__text project-container__text--sub-title">Client Project</div>
                     <p class="project-container__text project-container__text--paragraph">Lorem ipsum dolor sit amet
@@ -290,7 +265,7 @@
                     </div>
                 </div>
                 <div class="project-container">
-                    <img class="project-container__img" src="./project card/plang .jpeg" alt="">
+                    <img class="project-container__img" src="./images/plang .jpeg" alt="">
                     <div class="project-container__text project-container__text--title">React</div>
                     <div class="project-container__text project-container__text--sub-title">Client Project</div>
                     <p class="project-container__text project-container__text--paragraph">Lorem ipsum dolor sit amet
@@ -310,8 +285,8 @@
         </section>
     </main>
 
-    <footer id="footer" class="footer">
-        <a id="contact-info" class="footer__email" href="mailto:shivani.ganatra@icloud.com">shivaniganatra@live.com</a>
+    <footer id="contact-info" class="footer">
+        <a class="footer__email" href="mailto:shivani.ganatra@icloud.com">shivaniganatra@live.com</a>
         <div class="footer__icons">
 
             <a href="https://drive.google.com/file/d/1SCo3mXh3Bzv-8HEWJkZwtwh6Dq5mpMcq/view?usp=sharing">
