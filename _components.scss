@@ -4,6 +4,7 @@
     display: none;
 }
 
+
 .technical-skills-card {
 
     display: flex;
@@ -41,7 +42,7 @@
     }
 
     &__icon:nth-child(odd):hover path {
-        fill: $tertiary-color;
+        fill: $quinary-color;
     }
 
     &__icon:nth-child(even) path {
@@ -50,7 +51,7 @@
     }
 
     &__icon:nth-child(even):hover path {
-        fill: $septenary-color;
+        fill: $quarternary-color;
     }
 }
 
@@ -77,8 +78,10 @@
 }
 
     .project-container {
-        border: 15px solid $secondary-color;
+        border: 10px solid $primary-color;
+        box-shadow: $octinary-color 5px 10px;
         border-radius: 20px;
+        background-color: $secondary-color;
 
         &__img {
             width: 100%;
@@ -87,11 +90,12 @@
         &__buttons {
             background-color: $quinary-color;
             display: flex;
+            border-radius:  20px 0px;
         }
     
         &__button {
-            border: 2px solid $septenary-color;
-            border-radius: 10px;
+            border: 5px solid $primary-color;
+            border-radius: 0px 10px;
             width: 90px;
             height: 40px;
             margin: 10px;
@@ -152,6 +156,7 @@
 
         &__link:hover {
             border: 2px $senary-color dashed;
+            background-color: $nonary-color;
             color: darken($color: $senary-color, $amount: 25);
         }
 
@@ -202,7 +207,7 @@
         grid-template-rows: 1fr 1fr;
         padding: 0px;
         margin: 10px;
-        gap: 7px;
+        gap:20px 15px;
         max-width: 768px;
         justify-items: center;
 

@@ -11,11 +11,11 @@
 .technical-skills-card__header {
   padding: 30px 20px 30px 20px;
   font-size: 30px;
-  color: rgb(190, 99, 255);
+  color: rgb(39, 38, 104);
 }
 .technical-skills-card__paragraph {
   padding: 15px 30px 15px 30px;
-  color: rgb(199, 147, 238);
+  color: rgb(100, 145, 235);
   text-align: center;
   width: 100%;
 }
@@ -30,18 +30,18 @@
   height: auto;
 }
 .technical-skill-icons__icon:nth-child(odd) path {
-  fill: rgb(199, 147, 238);
+  fill: rgb(100, 145, 235);
   transition: fill 0.3s ease;
 }
 .technical-skill-icons__icon:nth-child(odd):hover path {
-  fill: #cdb3ff;
+  fill: rgb(184, 185, 255);
 }
 .technical-skill-icons__icon:nth-child(even) path {
-  fill: #cdb3ff;
+  fill: #b6ffb7;
   transition: fill 0.3s ease;
 }
 .technical-skill-icons__icon:nth-child(even):hover path {
-  fill: rgb(190, 99, 255);
+  fill: rgb(230, 200, 255);
 }
 
 #projects {
@@ -51,7 +51,7 @@
 }
 
 .projects-center__title {
-  color: rgb(190, 99, 255);
+  color: rgb(39, 38, 104);
   font-size: 30px;
   text-align: center;
   padding: 40px;
@@ -68,46 +68,49 @@
 }
 
 .project-container {
-  border: 15px solid rgb(240, 232, 255);
+  border: 10px solid white;
+  box-shadow: #d5ff96 5px 10px;
   border-radius: 20px;
+  background-color: lightcyan;
 }
 .project-container__img {
   width: 100%;
 }
 .project-container__buttons {
-  background-color: rgb(218, 181, 255);
+  background-color: rgb(184, 185, 255);
   display: flex;
+  border-radius: 20px 0px;
 }
 .project-container__button {
-  border: 2px solid rgb(190, 99, 255);
-  border-radius: 10px;
+  border: 5px solid white;
+  border-radius: 0px 10px;
   width: 90px;
   height: 40px;
   margin: 10px;
-  color: rgb(199, 147, 238);
-  background-color: rgb(240, 232, 255);
+  color: rgb(100, 145, 235);
+  background-color: lightcyan;
   transition: 0.3s ease;
 }
 .project-container__button:hover {
-  background-color: rgb(199, 147, 238);
-  color: rgb(240, 232, 255);
+  background-color: rgb(100, 145, 235);
+  color: lightcyan;
   border: 2px solid white;
 }
 .project-container__text {
   padding: 4px;
-  background-color: rgb(240, 232, 255);
+  background-color: lightcyan;
 }
 .project-container__text--title {
   font-size: 20px;
-  color: rgb(199, 147, 238);
+  color: rgb(100, 145, 235);
 }
 .project-container__text--sub-title {
   font-size: 35px;
-  color: rgb(190, 99, 255);
+  color: rgb(39, 38, 104);
 }
 .project-container__text--paragraph {
   font-size: 12px;
-  color: rgb(190, 99, 255);
+  color: rgb(39, 38, 104);
 }
 
 @media screen and (min-width: 768px) {
@@ -125,28 +128,29 @@
   }
   .navigation-container__link {
     text-decoration: none;
-    color: rgb(190, 99, 255);
+    color: rgb(39, 38, 104);
     padding: 11px 25px;
     border-radius: 4px;
     flex-direction: column;
     transition: ease 0.3s;
   }
   .navigation-container__link:hover {
-    border: 2px rgb(199, 147, 238) dashed;
-    color: #8e25dd;
+    border: 2px rgb(100, 145, 235) dashed;
+    background-color: #f2fee0;
+    color: #184db8;
   }
   .navigation-container__button {
     padding: 11px 25px;
-    background-color: rgb(240, 232, 255);
-    border: 2px rgb(199, 147, 238) solid;
+    background-color: lightcyan;
+    border: 2px rgb(100, 145, 235) solid;
     border-radius: 5px;
-    color: rgb(190, 99, 255);
+    color: rgb(39, 38, 104);
     font-size: 13px;
     font-weight: bolder;
     transition: 0.3s ease;
   }
   .navigation-container__button:hover {
-    background-color: rgb(218, 181, 255);
+    background-color: rgb(184, 185, 255);
     color: white;
   }
   .technical-skill-icons {
@@ -163,7 +167,7 @@
     flex-direction: column;
   }
   .projects-center__title {
-    color: rgb(190, 99, 255);
+    color: rgb(39, 38, 104);
     font-size: 40px;
     padding: 30px;
   }
@@ -173,12 +177,12 @@
     grid-template-rows: 1fr 1fr;
     padding: 0px;
     margin: 10px;
-    gap: 7px;
+    gap: 20px 15px;
     max-width: 768px;
     justify-items: center;
   }
   .project-container {
-    border: 10px solid rgb(240, 232, 255);
+    border: 10px solid lightcyan;
     border-radius: 15px;
     width: 100%;
   }
@@ -230,7 +234,6 @@ html {
 }
 
 .nav__links {
-  background-color: rgb(240, 232, 255);
   display: flex;
   flex-direction: column;
 }
@@ -238,18 +241,29 @@ html {
 .burger-menu-nav {
   position: sticky;
   top: 0;
+  display: flex;
 }
 
 .nav__link {
-  padding: 10px;
+  padding: 27px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  background-color: lightcyan;
 }
 
 .nav__item {
   padding: 10px;
   text-decoration: none;
+}
+
+.nav__button-icon {
+  border: 5px solid lightcyan;
+}
+
+.nav__button {
+  width: 51px;
+  height: 58px;
 }
 
 .header {
@@ -259,7 +273,7 @@ html {
   align-items: center;
   justify-content: center;
   padding: 20px 30px 70px 30px;
-  color: rgb(190, 99, 255);
+  color: rgb(39, 38, 104);
   background-color: rgb(255, 255, 255);
 }
 .header__image {
@@ -275,7 +289,7 @@ html {
 }
 
 .about-me {
-  color: rgb(199, 147, 238);
+  color: rgb(100, 145, 235);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -309,7 +323,7 @@ html {
   justify-content: center;
 }
 .footer__email {
-  color: rgb(190, 99, 255);
+  color: rgb(39, 38, 104);
   padding: 35px;
 }
 .footer__icons {
@@ -325,34 +339,34 @@ html {
   height: 60px;
 }
 .footer__icon--github-icon {
-  fill: rgb(199, 147, 238);
+  fill: rgb(100, 145, 235);
   width: 70px;
   height: 70px;
   transition: fill 0.3s ease;
 }
 .footer__icon--github-icon:hover {
-  fill: rgb(240, 232, 255);
+  fill: lightcyan;
 }
 .footer__icon--cv-icon rect {
-  fill: #cdb3ff;
+  fill: #b6ffb7;
   transition: fill 0.3s ease;
 }
 .footer__icon--cv-icon path {
-  fill: rgb(199, 147, 238);
+  fill: rgb(100, 145, 235);
   transition: fill 0.3s ease;
 }
 .footer__icon--cv-icon:hover rect {
-  fill: rgb(218, 181, 255);
+  fill: rgb(184, 185, 255);
 }
 .footer__icon--cv-icon:hover path {
-  fill: rgb(240, 232, 255);
+  fill: lightcyan;
 }
 .footer__icon--linkedin-icon {
-  fill: #cdb3ff;
+  fill: #b6ffb7;
   transition: fill 0.3s ease;
 }
 .footer__icon--linkedin-icon:hover {
-  fill: rgb(218, 181, 255);
+  fill: rgb(184, 185, 255);
 }
 
 @media screen and (min-width: 768px) {
@@ -377,6 +391,7 @@ html {
     display: flex;
     flex-direction: row;
     padding: 50px;
+    background-color: #d5ff96;
   }
   .about-me__title--1 {
     display: none;
@@ -394,7 +409,7 @@ html {
     align-items: center;
   }
   .footer__email {
-    color: rgb(190, 99, 255);
+    color: rgb(39, 38, 104);
     padding: 35px;
   }
 }

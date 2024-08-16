@@ -10,30 +10,44 @@ html {
     border: 0;
     margin: 0px;
     box-sizing: border-box;
-    font-family: "Raleway", sans serif;}
+    font-family: "Raleway", sans serif;
+    
+}
 
 .nav__links {
-    background-color: $secondary-color;
+ 
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column; 
 }
 
 .burger-menu-nav {
     position: sticky;
-    top: 0; 
+    top: 0;
+    display: flex; 
+
+    
 }
 
 .nav__link {
-    padding: 10px;
+    padding: 27px;
     display: flex;
     flex-direction: row;
-    align-items: center;  
+    align-items: center; 
+    background-color: $secondary-color;  
 }
 
 .nav__item {
     padding: 10px;
     text-decoration: none;
+}
+
+.nav__button-icon {
+    border: 5px solid $secondary-color;
+}
+
+.nav__button {
+    width: 51px;
+    height: 58px;
 }
 
 
@@ -46,6 +60,7 @@ html {
     padding: 20px 30px 70px 30px;
     color: $septenary-color;
     background-color: rgb(255, 255, 255);
+    
     
     
 
@@ -196,6 +211,7 @@ html {
         display: flex;
         flex-direction: row;
         padding: 50px;
+        background-color: $octinary-color;
 
         &__title--1 {
             display: none;
