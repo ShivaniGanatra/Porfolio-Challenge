@@ -298,8 +298,6 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 300px;
-  max-width: 50vw;
   width: 100vw;
   height: auto;
   z-index: 1;
@@ -324,6 +322,9 @@ html {
   text-decoration: none;
   background-color: #efffff;
   border: 2px dashed rgb(184, 185, 255);
+}
+.nav-container .nav-items .nav-item:active {
+  color: #acff30;
 }
 
 .header {
