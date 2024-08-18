@@ -11,53 +11,173 @@ html {
     margin: 0px;
     box-sizing: border-box;
     font-family: "Raleway", Calibri;
-    
+
 }
 
-.nav {
-    &__links {
-        display: flex;
-        flex-direction: column; 
-    }
+// .nav {
+//     &__links {
+//         display: flex;
+//         flex-direction: column; 
+//     }
 
-    &__link {
-        padding: 27px;
-        display: flex;
-        flex-direction: row;
-        align-items: center; 
-        background-color: $secondary-color;  
-    }
+//     &__link {
+//         padding: 27px;
+//         display: flex;
+//         flex-direction: row;
+//         align-items: center; 
+//         background-color: $secondary-color;  
+//     }
 
-    &__link-text {
-        padding: 10px;
-        text-decoration: none;
-    }
-    
-    &__link-text:hover {
-        border-radius: 10px 0px;
-        text-decoration: none;
-        background-color: lighten($color: $secondary-color, $amount: 3);
-        border: 2px dashed $quinary-color;
-    }
-    
-    &__link-text:active {
-        color: darken($color: $octinary-color, $amount: 20);
-    }
-    
-    &__button-icon {
-        border: 5px solid $secondary-color;
-    }
-    
-    &__button {
-        width: 51px;
-        height: 58px;
-    }
-}
+//     &__link-text {
+//         padding: 10px;
+//         text-decoration: none;
+//     }
 
-.burger-menu-nav {
+//     &__link-text:hover {
+        // border-radius: 10px 0px;
+        // text-decoration: none;
+        // background-color: lighten($color: $secondary-color, $amount: 3);
+        // border: 2px dashed $quinary-color;
+//     }
+
+//     &__link-text:active {
+//         color: darken($color: $octinary-color, $amount: 20);
+//     }
+
+//     &__button-icon {
+//         border: 5px solid $secondary-color;
+//     }
+
+//     &__button {
+//         width: 51px;
+//         height: 58px;
+//     }
+// }
+
+// .burger-menu-nav {
+//     position: sticky;
+//     top: 0;
+//     display: flex;  
+// }
+
+$toggleSize: 40px;
+$toggleMargin: 10px;
+$toggleLine: 4px;
+$toggleColor: $senary-color;
+
+.nav-container {
     position: sticky;
     top: 0;
-    display: flex;  
+    display: inline-block;
+    max-width: $toggleSize + $toggleMargin;
+    max-height: $toggleSize + $toggleMargin;
+    overflow: visible;
+    outline: none;
+
+    //&:focus-within, &:focus {
+    &.is-active {
+        .nav-toggle {
+
+            &:before,
+            &:after {
+                box-shadow: none;
+            }
+
+            &:before {
+                transform: rotate(-45deg);
+            }
+
+            &:after {
+                transform: rotate(45deg);
+            }
+        }
+
+        .nav-items {
+            transform: translate(0, 0);
+        }
+    }
+
+    .nav-toggle {
+        $offset: $toggleSize * 0.5;
+
+        position: sticky;
+        top: 0;
+        width: $toggleSize;
+        height: $toggleSize;
+        margin: $toggleMargin;
+        z-index: 2;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: #{$offset - $toggleLine / 2};
+            left: 0;
+            transform: translate(0, 0);
+            width: 100%;
+            height: $toggleLine;
+            background: $toggleColor;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        &:before {
+            box-shadow: 0 #{$offset / 1.5} 0 0 $toggleColor;
+        }
+
+        &:after {
+            box-shadow: 0 #{-$offset / 1.5} 0 0 $toggleColor;
+        }
+    }
+
+    .nav__link-text:active {
+        color: darken($color: $octinary-color, $amount: 20);
+    }
+    .nav__link-text {
+        padding: 10px;
+    }
+    
+    .nav__chevron {
+        padding: 10px;
+    }
+
+    .nav-items {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 300px;
+        max-width: 50vw;
+        width: 100vw;
+        height: auto;
+        z-index: 1;
+        padding: 80px 20px 20px 10px;
+        transition: transform .3s ease;
+        transform: translate(calc(-100% - 50px), 0);
+        background: $secondary-color;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px 0;
+        align-content: start;
+        
+
+        .nav-item {
+            padding: 10px;
+            transition: background-color .3s ease;
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+
+            &:hover {
+                border-radius: 10px 0px;
+                text-decoration: none;
+                background-color: lighten($color: $secondary-color, $amount: 3);
+                border: 2px dashed $quinary-color;
+            }
+        }
+    }
 }
 
 .header {
@@ -69,8 +189,8 @@ html {
     padding: 20px 30px 70px 30px;
     color: $septenary-color;
     background-color: rgb(255, 255, 255);
-    
-    
+
+
     &__image {
         display: none;
     }
@@ -91,7 +211,7 @@ html {
     flex-direction: column;
     align-items: center;
     background-color: $octinary-color;
-    
+
     &__title--1 {
         display: flex;
         justify-content: center;
@@ -124,7 +244,7 @@ html {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    
+
     &__email {
         color: $septenary-color;
         padding: 35px;
@@ -141,43 +261,43 @@ html {
     &__icon {
         width: 60px;
         height: 60px;
-    
+
         &--github-icon {
             fill: $senary-color;
             width: 70px;
             height: 70px;
             transition: fill 0.3s ease;
         }
-    
+
         &--github-icon:hover {
             fill: $secondary-color;
         }
-    
+
         &--cv-icon rect {
             fill: $tertiary-color;
             transition: fill 0.3s ease;
-    
+
         }
-    
+
         &--cv-icon path {
             fill: $senary-color;
             transition: fill 0.3s ease;
         }
-    
+
         &--cv-icon:hover rect {
             fill: $quinary-color;
         }
-    
+
         &--cv-icon:hover path {
             fill: $secondary-color;
-    
+
         }
-    
+
         &--linkedin-icon {
             fill: $tertiary-color;
             transition: fill 0.3s ease;
         }
-    
+
         &--linkedin-icon:hover {
             fill: $quinary-color;
         }
@@ -186,6 +306,9 @@ html {
 }
 
 @media screen and (min-width:768px) {
+    .nav-container {
+        display: none;
+    }
 
     .burger-menu-nav {
         display: none;
