@@ -14,56 +14,9 @@ html {
 
 }
 
-// .nav {
-//     &__links {
-//         display: flex;
-//         flex-direction: column; 
-//     }
-
-//     &__link {
-//         padding: 27px;
-//         display: flex;
-//         flex-direction: row;
-//         align-items: center; 
-//         background-color: $secondary-color;  
-//     }
-
-//     &__link-text {
-//         padding: 10px;
-//         text-decoration: none;
-//     }
-
-//     &__link-text:hover {
-        // border-radius: 10px 0px;
-        // text-decoration: none;
-        // background-color: lighten($color: $secondary-color, $amount: 3);
-        // border: 2px dashed $quinary-color;
-//     }
-
-//     &__link-text:active {
-//         color: darken($color: $octinary-color, $amount: 20);
-//     }
-
-//     &__button-icon {
-//         border: 5px solid $secondary-color;
-//     }
-
-//     &__button {
-//         width: 51px;
-//         height: 58px;
-//     }
-// }
-
-// .burger-menu-nav {
-//     position: sticky;
-//     top: 0;
-//     display: flex;  
-// }
-
-$toggleSize: 40px;
-$toggleMargin: 10px;
-$toggleLine: 4px;
-$toggleColor: $senary-color;
+.desktop-navigation-container {
+    display: none;
+}
 
 .nav-container {
     position: sticky;
@@ -75,7 +28,7 @@ $toggleColor: $senary-color;
     outline: none;
 
     //&:focus-within, &:focus {
-    &.is-active {
+    &.is-active { //this is adding a class
         .nav-toggle {
 
             &:before,
@@ -92,94 +45,91 @@ $toggleColor: $senary-color;
             }
         }
 
-        .nav-items {
+        .nav-links {
             transform: translate(0, 0);
         }
     }
 
-    .nav-toggle {
-        $offset: $toggleSize * 0.5;
+}
 
-        position: sticky;
-        top: 0;
-        width: $toggleSize;
-        height: $toggleSize;
-        margin: $toggleMargin;
-        z-index: 2;
+.nav-toggle {
+    $offset: $toggleSize * 0.5;
+    position: sticky;
+    top: 0;
+    width: $toggleSize;
+    height: $toggleSize;
+    margin: $toggleMargin;
+    z-index: 2;
 
-        &:hover {
-            cursor: pointer;
-        }
-
-        &:before,
-        &:after {
-            content: "";
-            position: absolute;
-            top: #{$offset - $toggleLine / 2};
-            left: 0;
-            transform: translate(0, 0);
-            width: 100%;
-            height: $toggleLine;
-            background: $toggleColor;
-            transition: transform .3s ease, box-shadow .3s ease;
-        }
-
-        &:before {
-            box-shadow: 0 #{$offset / 1.5} 0 0 $toggleColor;
-        }
-
-        &:after {
-            box-shadow: 0 #{-$offset / 1.5} 0 0 $toggleColor;
-        }
+    &:hover {
+        cursor: pointer;
     }
 
-    .nav__link-text:active {
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: #{$offset - $toggleLine / 2};
+        left: 0;
+        transform: translate(0, 0);
+        width: 100%;
+        height: $toggleLine;
+        background: $toggleColor;
+        transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    &:before {
+        box-shadow: 0 #{$offset / 1.5} 0 0 $toggleColor;
+    }
+
+    &:after {
+        box-shadow: 0 #{-$offset / 1.5} 0 0 $toggleColor;
+    }
+}
+
+.nav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85vw;
+    height: auto;
+    z-index: 1;
+    padding: 80px 20px 20px 10px;
+    transition: transform .3s ease;
+    transform: translate(calc(-100% - 50px), 0);
+    background: $secondary-color;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px 0;
+    align-content: start;
+}
+
+.nav-link {
+    padding: 10px;
+    transition: background-color .3s ease;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+
+    &:hover {
+        border-radius: 10px 0px;
+        text-decoration: none;
+        background-color: lighten($color: $secondary-color, $amount: 3);
+        border: 2px dashed $quinary-color;
+    }
+
+    &:active {
         color: darken($color: $octinary-color, $amount: 20);
     }
-    .nav__link-text {
-        padding: 10px;
-    }
-    
-    .nav__chevron {
+
+    &__chevron {
         padding: 10px;
     }
 
-    .nav-items {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: auto;
-        z-index: 1;
-        padding: 80px 20px 20px 10px;
-        transition: transform .3s ease;
-        transform: translate(calc(-100% - 50px), 0);
-        background: $secondary-color;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 5px 0;
-        align-content: start;
-        
-
-        .nav-item {
-            padding: 10px;
-            transition: background-color .3s ease;
-            display: flex;
-            flex-direction: row;
-            text-decoration: none;
-
-            &:hover {
-                border-radius: 10px 0px;
-                text-decoration: none;
-                background-color: lighten($color: $secondary-color, $amount: 3);
-                border: 2px dashed $quinary-color;
-            }
-
-            &:active {
-                color: darken($color: $octinary-color, $amount: 20);
-            }
-        }
+    &__text {
+        padding: 10px;
     }
+
 }
 
 .header {
@@ -316,9 +266,56 @@ $toggleColor: $senary-color;
         display: none;
     }
 
-    .navigation__container {
+    .desktop-navigation__container {
         display: block;
     }
+
+
+    .desktop-navigation-container {
+        background-color: $primary-color;
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        align-items: flex-end;
+        padding: 20px 20px 5px 20px;
+        font-size: 13px;
+        gap: 10px;
+
+        &__link {
+            text-decoration: none;
+            color: $septenary-color;
+            padding: 11px 25px;
+            border-radius: 0px 10px;
+            flex-direction: column;
+            transition: ease 0.3s;
+        }
+
+        &__link:hover {
+            border: 2px $senary-color dashed;
+            background-color: $nonary-color;
+            color: darken($color: $senary-color, $amount: 25);
+        }
+
+        &__button {
+            padding: 11px 25px;
+            background-color: $secondary-color;
+            border: 2px $senary-color solid;
+            border-radius: 0px 10px;
+            color: $septenary-color;
+            font-size: 13px;
+            font-weight: bolder;
+            transition: 0.3s ease;
+        }
+
+        &__button:hover {
+            background-color: $quinary-color;
+            color: $primary-color;
+            border: 3px $octinary-color dashed;
+        }
+    }
+
 
     .header {
         padding: 30px 60px 40px 60px;
@@ -378,6 +375,13 @@ $toggleColor: $senary-color;
 }
 
 @media screen and (min-width:1440px) {
+
+        .desktop-navigation-container {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        align-items: flex-end;
+    }
 
     .header {
         padding: 0px 130px 0px 130px;
