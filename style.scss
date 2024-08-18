@@ -1,5 +1,6 @@
-@use"./variables.scss" as*;
-@use"./components.scss";
+@import"./variables.scss";
+@import"./components.scss";
+@import"./mixins.scss";
 
 html {
     scroll-behavior: smooth;
@@ -11,7 +12,6 @@ html {
     margin: 0px;
     box-sizing: border-box;
     font-family: "Raleway", Calibri;
-
 }
 
 .desktop-navigation-container {
@@ -28,7 +28,9 @@ html {
     outline: none;
 
     //&:focus-within, &:focus {
-    &.is-active { //this is adding a class
+    &.is-active {
+
+        //this is adding a class
         .nav-toggle {
 
             &:before,
@@ -49,7 +51,6 @@ html {
             transform: translate(0, 0);
         }
     }
-
 }
 
 .nav-toggle {
@@ -107,8 +108,7 @@ html {
 .nav-link {
     padding: 10px;
     transition: background-color .3s ease;
-    display: flex;
-    flex-direction: row;
+    @include flex-center(row);
     text-decoration: none;
 
     &:hover {
@@ -134,10 +134,7 @@ html {
 
 .header {
     font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex-center(column);
     padding: 20px 30px 70px 30px;
     color: $septenary-color;
     background-color: lighten($color: $quarternary-color, $amount: 6);
@@ -160,14 +157,10 @@ html {
 }
 
 .about-me {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-center(column);
     background-color: $octinary-color;
 
     &__title--mobile {
-        display: flex;
-        justify-content: center;
         padding: 60px;
         font-size: 40px;
         color: $senary-color;
@@ -180,7 +173,6 @@ html {
     &__image {
         width: 85%;
         padding: 15px;
-        
     }
 
     &__paragraph {
@@ -194,10 +186,7 @@ html {
     background-color: $primary-color;
     height: 216px;
     padding: 50px;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
+    @include flex-center(column-reverse);
 
     &__email {
         color: $septenary-color;
@@ -205,7 +194,7 @@ html {
     }
 
     &__icons {
-        display: flex;
+        @include flex-center(row);
         padding: 0;
         margin: 0;
         gap: 10px;
@@ -230,7 +219,6 @@ html {
         &--cv-icon rect {
             fill: $tertiary-color;
             transition: fill 0.3s ease;
-
         }
 
         &--cv-icon path {
@@ -256,7 +244,6 @@ html {
             fill: $quinary-color;
         }
     }
-
 }
 
 @media screen and (min-width:768px) {
@@ -268,10 +255,9 @@ html {
         display: none;
     }
 
-    .desktop-navigation__container {
+    .desktop-navigation-container {
         display: block;
     }
-
 
     .desktop-navigation-container {
         background-color: lighten($color: $quarternary-color, $amount: 4);
@@ -318,7 +304,6 @@ html {
         }
     }
 
-
     .header {
         padding: 30px 60px 40px 60px;
         text-align: start;
@@ -335,8 +320,7 @@ html {
     }
 
     .about-me {
-        display: flex;
-        flex-direction: row;
+        @include flex-center(row);
         padding: 60px;
         background-color: $octinary-color;
 
@@ -379,13 +363,6 @@ html {
 
 @media screen and (min-width:1440px) {
 
-        .desktop-navigation-container {
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: row;
-        align-items: flex-end;
-    }
-
     .header {
         padding: 0px 130px 0px 130px;
 
@@ -411,7 +388,6 @@ html {
         }
 
         &__paragraph {
-            padding: 10px 15px 10px 15px;
             font-size: 20px;
         }
     }

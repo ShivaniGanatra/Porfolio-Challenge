@@ -1,12 +1,9 @@
-@use"./variables.scss" as*;
-
+@import "./variables.scss";
+@import "./mixins.scss";
 
 
 .technical-skills-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex-center(column);
     background-color: lighten($color: $secondary-color, $amount: 5);
 
     &__title {
@@ -27,6 +24,7 @@
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
     padding: 40px 20px 40px 20px;
     justify-items: center;
     width: 320px;
@@ -57,20 +55,18 @@
 
 .projects-center {
     background-color: lighten($color: $octinary-color, $amount: 8px);
-}
 
-.projects-center__title {
-    color: $septenary-color;
-    font-size: 40px;
-    text-align: center;
-    padding: 60px;
+    &__title {
+        color: $septenary-color;
+        font-size: 40px;
+        text-align: center;
+        padding: 60px;
+    }
 }
 
 .project-containers {
-    display: flex;
-    flex-direction: column;
+    @include flex-center(column);
     gap: 50px;
-    align-items: center;
     padding: 20px 20px 50px 20px;
     max-width: 425px;
 }
@@ -131,11 +127,8 @@
 }
 
 @media screen and (min-width:768px) {
-
-
-
     .technical-skill-icons {
-        display: flex;
+        @include flex-center(row);
         width: 768px;
 
         &__icon {
@@ -145,9 +138,7 @@
     }
 
     .projects-center {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        @include flex-center(column);
 
         &__title {
             color: $septenary-color;
@@ -162,40 +153,30 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         margin: 10px;
-        gap: 20px 15px;
+        gap: 30px 15px;
         max-width: 100%;
-        display: grid;
-        grid-template-columns:1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        justify-content: center;
         align-items: center;
+        
     }
 
     .project-container {
+        max-width: 100%;
+        height: auto;
         border: 10px solid $secondary-color;
         border-radius: 15px;
         width: 87%;
-        justify-content: center;
-        align-items: center;
 
         &__img {
             width: 100%;
         }
-
     }
 
 }
 
 @media screen and (min-width:1440px) {
-    .technical-skills-icons {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
 
     .projects__center {
-        display: flex;
-        justify-content: center;
         width: 1440px;
         padding: 50px;
     }
