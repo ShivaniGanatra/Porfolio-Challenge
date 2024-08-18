@@ -10,46 +10,55 @@ html {
     border: 0;
     margin: 0px;
     box-sizing: border-box;
-    font-family: "Raleway", sans serif;
+    font-family: "Raleway", Calibri;
     
 }
 
-.nav__links {
- 
-    display: flex;
-    flex-direction: column; 
+.nav {
+    &__links {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    &__link {
+        padding: 27px;
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        background-color: $secondary-color;  
+    }
+
+    &__link-text {
+        padding: 10px;
+        text-decoration: none;
+    }
+    
+    &__link-text:hover {
+        border-radius: 10px 0px;
+        text-decoration: none;
+        background-color: lighten($color: $secondary-color, $amount: 3);
+        border: 2px dashed $quinary-color;
+    }
+    
+    &__link-text:active {
+        color: darken($color: $octinary-color, $amount: 20);
+    }
+    
+    &__button-icon {
+        border: 5px solid $secondary-color;
+    }
+    
+    &__button {
+        width: 51px;
+        height: 58px;
+    }
 }
 
 .burger-menu-nav {
     position: sticky;
     top: 0;
-    display: flex; 
-
-    
+    display: flex;  
 }
-
-.nav__link {
-    padding: 27px;
-    display: flex;
-    flex-direction: row;
-    align-items: center; 
-    background-color: $secondary-color;  
-}
-
-.nav__item {
-    padding: 10px;
-    text-decoration: none;
-}
-
-.nav__button-icon {
-    border: 5px solid $secondary-color;
-}
-
-.nav__button {
-    width: 51px;
-    height: 58px;
-}
-
 
 .header {
     font-family: Arial, Helvetica, sans-serif;
@@ -62,8 +71,6 @@ html {
     background-color: rgb(255, 255, 255);
     
     
-    
-
     &__image {
         display: none;
     }
@@ -75,22 +82,22 @@ html {
     }
 
     &__sub-title {
-        font-size: 45px;
+        font-size: 38px;
     }
 }
 
 .about-me {
-    color: $senary-color;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    background-color: $octinary-color;
+    
     &__title--1 {
         display: flex;
         justify-content: center;
-        padding: 0px;
-        padding: 10px 20px 10px 20px;
-        font-size: 20px;
+        padding: 60px;
+        font-size: 40px;
+        color: $senary-color;
     }
 
     &__title--2 {
@@ -103,8 +110,9 @@ html {
     }
 
     &__paragraph {
-        padding: 10px 15px 10px 15px;
-        font-size: 12px;
+        padding: 10px 25px 40px 25px;
+        font-size: 15px;
+        color: $senary-color;
     }
 }
 
@@ -116,7 +124,7 @@ html {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-
+    
     &__email {
         color: $septenary-color;
         padding: 35px;
@@ -130,64 +138,58 @@ html {
         background-color: $primary-color;
     }
 
+    &__icon {
+        width: 60px;
+        height: 60px;
+    
+        &--github-icon {
+            fill: $senary-color;
+            width: 70px;
+            height: 70px;
+            transition: fill 0.3s ease;
+        }
+    
+        &--github-icon:hover {
+            fill: $secondary-color;
+        }
+    
+        &--cv-icon rect {
+            fill: $tertiary-color;
+            transition: fill 0.3s ease;
+    
+        }
+    
+        &--cv-icon path {
+            fill: $senary-color;
+            transition: fill 0.3s ease;
+        }
+    
+        &--cv-icon:hover rect {
+            fill: $quinary-color;
+        }
+    
+        &--cv-icon:hover path {
+            fill: $secondary-color;
+    
+        }
+    
+        &--linkedin-icon {
+            fill: $tertiary-color;
+            transition: fill 0.3s ease;
+        }
+    
+        &--linkedin-icon:hover {
+            fill: $quinary-color;
+        }
+    }
+
 }
-
-.footer__icon {
-    width: 60px;
-    height: 60px;
-
-
-
-    &--github-icon {
-        fill: $senary-color;
-        width: 70px;
-        height: 70px;
-        transition: fill 0.3s ease;
-    }
-
-    &--github-icon:hover {
-        fill: $secondary-color;
-    }
-
-    &--cv-icon rect {
-        fill: $tertiary-color;
-        transition: fill 0.3s ease;
-
-    }
-
-    &--cv-icon path {
-        fill: $senary-color;
-        transition: fill 0.3s ease;
-
-    }
-
-    &--cv-icon:hover rect {
-        fill: $quinary-color;
-    }
-
-    &--cv-icon:hover path {
-        fill: $secondary-color;
-
-    }
-
-    &--linkedin-icon {
-        fill: $tertiary-color;
-        transition: fill 0.3s ease;
-    }
-
-    &--linkedin-icon:hover {
-        fill: $quinary-color;
-    }
-}
-
-
 
 @media screen and (min-width:768px) {
 
     .burger-menu-nav {
         display: none;
     }
-
 
     .navigation__container {
         display: block;
@@ -210,8 +212,13 @@ html {
     .about-me {
         display: flex;
         flex-direction: row;
-        padding: 50px;
+        padding: 60px;
         background-color: $octinary-color;
+
+        &__image {
+            width: 85%;
+            padding: 0%;
+        }
 
         &__title--1 {
             display: none;
@@ -219,7 +226,14 @@ html {
 
         &__title--2 {
             display: block;
-            padding: 15px;
+            font-size: 40px;
+            padding: 5px 25px;
+            color: $senary-color;
+        }
+
+        &__paragraph {
+            font-size: 11px;
+            padding: 5px 25px;
         }
     }
 
@@ -252,8 +266,6 @@ html {
         }
     }
 
-
-
     .about-me {
         padding: 100px;
 
@@ -263,7 +275,6 @@ html {
         }
 
         &__title--2 {
-
             font-size: 36px;
         }
 
