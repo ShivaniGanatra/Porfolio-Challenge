@@ -140,7 +140,7 @@ html {
     justify-content: center;
     padding: 20px 30px 70px 30px;
     color: $septenary-color;
-    background-color: rgb(255, 255, 255);
+    background-color: lighten($color: $quarternary-color, $amount: 6);
 
 
     &__image {
@@ -148,13 +148,14 @@ html {
     }
 
     &__title {
-        padding: 25px 10px 25px 10px;
+        padding: 25px 10px 15px 10px;
         font-size: 16px;
         height: 20px;
     }
 
     &__sub-title {
-        font-size: 38px;
+        font-size: 28px;
+        padding: 25px 10px 15px 10px;
     }
 }
 
@@ -164,7 +165,7 @@ html {
     align-items: center;
     background-color: $octinary-color;
 
-    &__title--1 {
+    &__title--mobile {
         display: flex;
         justify-content: center;
         padding: 60px;
@@ -172,13 +173,14 @@ html {
         color: $senary-color;
     }
 
-    &__title--2 {
+    &__title--desktop {
         display: none;
     }
 
     &__image {
         width: 85%;
         padding: 15px;
+        
     }
 
     &__paragraph {
@@ -272,14 +274,14 @@ html {
 
 
     .desktop-navigation-container {
-        background-color: $primary-color;
+        background-color: lighten($color: $quarternary-color, $amount: 4);
         position: sticky;
         top: 0;
         display: flex;
         justify-content: flex-end;
         flex-direction: row;
         align-items: flex-end;
-        padding: 20px 20px 5px 20px;
+        padding: 7px 20px 5px 20px;
         font-size: 13px;
         gap: 10px;
 
@@ -320,6 +322,7 @@ html {
     .header {
         padding: 30px 60px 40px 60px;
         text-align: start;
+        background-color: $primary-color;
 
         &__image {
             display: block;
@@ -342,11 +345,11 @@ html {
             padding: 0%;
         }
 
-        &__title--1 {
+        &__title--mobile {
             display: none;
         }
 
-        &__title--2 {
+        &__title--desktop {
             display: block;
             font-size: 40px;
             padding: 5px 25px;
@@ -403,7 +406,7 @@ html {
             height: auto;
         }
 
-        &__title--2 {
+        &__title--desktop {
             font-size: 36px;
         }
 

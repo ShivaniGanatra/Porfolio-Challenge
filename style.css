@@ -289,18 +289,19 @@ html {
   justify-content: center;
   padding: 20px 30px 70px 30px;
   color: rgb(39, 38, 104);
-  background-color: rgb(255, 255, 255);
+  background-color: #f4e7ff;
 }
 .header__image {
   display: none;
 }
 .header__title {
-  padding: 25px 10px 25px 10px;
+  padding: 25px 10px 15px 10px;
   font-size: 16px;
   height: 20px;
 }
 .header__sub-title {
-  font-size: 38px;
+  font-size: 28px;
+  padding: 25px 10px 15px 10px;
 }
 
 .about-me {
@@ -309,14 +310,14 @@ html {
   align-items: center;
   background-color: #d5ff96;
 }
-.about-me__title--1 {
+.about-me__title--mobile {
   display: flex;
   justify-content: center;
   padding: 60px;
   font-size: 40px;
   color: rgb(103, 153, 255);
 }
-.about-me__title--2 {
+.about-me__title--desktop {
   display: none;
 }
 .about-me__image {
@@ -395,14 +396,14 @@ html {
     display: block;
   }
   .desktop-navigation-container {
-    background-color: white;
+    background-color: #efdcff;
     position: sticky;
     top: 0;
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
     align-items: flex-end;
-    padding: 20px 20px 5px 20px;
+    padding: 7px 20px 5px 20px;
     font-size: 13px;
     gap: 10px;
   }
@@ -437,6 +438,7 @@ html {
   .header {
     padding: 30px 60px 40px 60px;
     text-align: start;
+    background-color: white;
     display: flex;
     flex-direction: row;
   }
@@ -455,10 +457,10 @@ html {
     width: 85%;
     padding: 0%;
   }
-  .about-me__title--1 {
+  .about-me__title--mobile {
     display: none;
   }
-  .about-me__title--2 {
+  .about-me__title--desktop {
     display: block;
     font-size: 40px;
     padding: 5px 25px;
@@ -504,7 +506,7 @@ html {
     max-width: 100%;
     height: auto;
   }
-  .about-me__title--2 {
+  .about-me__title--desktop {
     font-size: 36px;
   }
   .about-me__paragraph {
