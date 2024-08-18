@@ -7,9 +7,7 @@
     background-color: lighten($color: $secondary-color, $amount: 5);
 
     &__title {
-        padding: 60px;
-        font-size: 40px;
-        color: $septenary-color;
+    @include title-font-style;
     }
 
     &__paragraph {
@@ -57,10 +55,9 @@
     background-color: lighten($color: $octinary-color, $amount: 8px);
 
     &__title {
-        color: $septenary-color;
-        font-size: 40px;
+        @include title-font-style;
         text-align: center;
-        padding: 60px;
+        
     }
 }
 
@@ -153,7 +150,7 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         margin: 10px;
-        gap: 30px 15px;
+        gap: 30px 0px;
         max-width: 100%;
         justify-content: center;
         align-items: center;
@@ -161,11 +158,14 @@
     }
 
     .project-container {
+        display: flex;
+        flex-direction: column;
         max-width: 100%;
         height: auto;
         border: 10px solid $secondary-color;
         border-radius: 15px;
         width: 87%;
+
 
         &__img {
             width: 100%;

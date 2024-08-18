@@ -1,8 +1,13 @@
-
-
+@import"./variables";
 @mixin flex-center ($flex-direction) {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: $flex-direction;
+}
+
+@mixin title-font-style ($color: $septenary-color) {
+    padding: 60px;
+    font-size: 40px;
+    color: $color;
 }

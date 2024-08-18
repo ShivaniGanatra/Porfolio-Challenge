@@ -161,9 +161,7 @@ html {
     background-color: $octinary-color;
 
     &__title--mobile {
-        padding: 60px;
-        font-size: 40px;
-        color: $senary-color;
+        @include title-font-style($senary-color);
     }
 
     &__title--desktop {
