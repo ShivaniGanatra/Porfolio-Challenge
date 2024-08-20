@@ -7,12 +7,12 @@
     background-color: lighten($color: $secondary-color, $amount: 5);
 
     &__title {
-    @include title-font-style;
+        @include title-font-style;
     }
 
     &__paragraph {
         padding: 15px 30px 15px 30px;
-        color: $senary-color;
+        @include medium-text;
         text-align: center;
         width: 100%;
     }
@@ -57,7 +57,7 @@
     &__title {
         @include title-font-style;
         text-align: center;
-        
+
     }
 }
 
@@ -70,8 +70,8 @@
 
 .project-container {
     border: 10px solid $primary-color;
-    box-shadow: darken($color: $tertiary-color, $amount: 5)  10px 10px;
-    
+    box-shadow: darken($color: $tertiary-color, $amount: 5) 10px 10px;
+
     border-radius: 20px;
     background-color: $secondary-color;
 
@@ -112,14 +112,60 @@
         }
 
         &--sub-title {
-            font-size: 30px;
-            color: $septenary-color;
+            @include medium-large-text
         }
 
         &--paragraph {
-            font-size: 12px;
-            color: $septenary-color;
+            @include small-text;
+
         }
+    }
+}
+
+
+
+.my-journey {
+    padding: 30px;
+    background-color: lighten($color: $quarternary-color, $amount: 5);
+
+    &__title {
+        @include title-font-style;
+        text-align: center;
+
+    }
+
+    &__para {
+        padding: 10px 0px;
+        @include medium-text
+    }
+
+    .my-experience {
+        padding: 10px 0px;
+
+        &__title {
+            @include medium-large-text;
+            padding: 5px 0px;
+
+        }
+    }
+
+    .my-experience-section__text--date {
+        font-size: 10px;
+        color: $septenary-color
+    }
+
+    .my-experience-section__text--header {
+        font-size: 14px;
+        color: $septenary-color
+    }
+
+    .my-experience-section__list {
+        padding: 10px 0px;
+    }
+
+    .my-experience-section__list-item {
+        padding: 10px 0px;
+        @include small-text
     }
 }
 
@@ -154,7 +200,7 @@
         max-width: 100%;
         justify-content: center;
         align-items: center;
-        
+
     }
 
     .project-container {

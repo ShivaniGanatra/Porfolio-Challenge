@@ -12,6 +12,7 @@
 }
 .technical-skills-card__paragraph {
   padding: 15px 30px 15px 30px;
+  font-size: 15px;
   color: rgb(103, 153, 255);
   text-align: center;
   width: 100%;
@@ -107,6 +108,46 @@
   color: rgb(39, 38, 104);
 }
 .project-container__text--paragraph {
+  font-size: 12px;
+  color: rgb(39, 38, 104);
+}
+
+.my-journey {
+  padding: 30px;
+  background-color: #f2e2ff;
+}
+.my-journey__title {
+  padding: 60px;
+  font-size: 40px;
+  color: rgb(39, 38, 104);
+  text-align: center;
+}
+.my-journey__para {
+  padding: 10px 0px;
+  font-size: 15px;
+  color: rgb(103, 153, 255);
+}
+.my-journey .my-experience {
+  padding: 10px 0px;
+}
+.my-journey .my-experience__title {
+  font-size: 30px;
+  color: rgb(39, 38, 104);
+  padding: 5px 0px;
+}
+.my-journey .my-experience-section__text--date {
+  font-size: 10px;
+  color: rgb(39, 38, 104);
+}
+.my-journey .my-experience-section__text--header {
+  font-size: 14px;
+  color: rgb(39, 38, 104);
+}
+.my-journey .my-experience-section__list {
+  padding: 10px 0px;
+}
+.my-journey .my-experience-section__list-item {
+  padding: 10px 0px;
   font-size: 12px;
   color: rgb(39, 38, 104);
 }

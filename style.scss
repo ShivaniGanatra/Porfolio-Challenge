@@ -175,10 +175,11 @@ html {
 
     &__paragraph {
         padding: 10px 25px 40px 25px;
-        font-size: 15px;
-        color: $senary-color;
+        @include medium-text
     }
 }
+
+
 
 .footer {
     background-color: $primary-color;
@@ -243,6 +244,7 @@ html {
         }
     }
 }
+
 
 @media screen and (min-width:768px) {
     .nav-container {
