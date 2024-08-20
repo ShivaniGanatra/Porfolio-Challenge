@@ -124,50 +124,9 @@
 
 
 
-.my-journey {
-    padding: 30px;
-    background-color: lighten($color: $quarternary-color, $amount: 5);
 
-    &__title {
-        @include title-font-style;
-        text-align: center;
 
-    }
 
-    &__para {
-        padding: 10px 0px;
-        @include medium-text
-    }
-
-    .my-experience {
-        padding: 10px 0px;
-
-        &__title {
-            @include medium-large-text;
-            padding: 5px 0px;
-
-        }
-    }
-
-    .my-experience-section__text--date {
-        font-size: 10px;
-        color: $septenary-color
-    }
-
-    .my-experience-section__text--header {
-        font-size: 14px;
-        color: $septenary-color
-    }
-
-    .my-experience-section__list {
-        padding: 10px 0px;
-    }
-
-    .my-experience-section__list-item {
-        padding: 10px 0px;
-        @include small-text
-    }
-}
 
 @media screen and (min-width:768px) {
     .technical-skill-icons {

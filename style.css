@@ -112,46 +112,6 @@
   color: rgb(39, 38, 104);
 }
 
-.my-journey {
-  padding: 30px;
-  background-color: #f2e2ff;
-}
-.my-journey__title {
-  padding: 60px;
-  font-size: 40px;
-  color: rgb(39, 38, 104);
-  text-align: center;
-}
-.my-journey__para {
-  padding: 10px 0px;
-  font-size: 15px;
-  color: rgb(103, 153, 255);
-}
-.my-journey .my-experience {
-  padding: 10px 0px;
-}
-.my-journey .my-experience__title {
-  font-size: 30px;
-  color: rgb(39, 38, 104);
-  padding: 5px 0px;
-}
-.my-journey .my-experience-section__text--date {
-  font-size: 10px;
-  color: rgb(39, 38, 104);
-}
-.my-journey .my-experience-section__text--header {
-  font-size: 14px;
-  color: rgb(39, 38, 104);
-}
-.my-journey .my-experience-section__list {
-  padding: 10px 0px;
-}
-.my-journey .my-experience-section__list-item {
-  padding: 10px 0px;
-  font-size: 12px;
-  color: rgb(39, 38, 104);
-}
-
 @media screen and (min-width: 768px) {
   .technical-skill-icons {
     display: flex;
@@ -300,9 +260,8 @@ html {
   padding: 10px;
   transition: background-color 0.3s ease;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: row;
+  justify-content: flex-start;
   text-decoration: none;
 }
 .nav-link:hover {
@@ -427,7 +386,89 @@ html {
   fill: rgb(184, 185, 255);
 }
 
+.my-journey {
+  padding: 30px;
+  background-color: #f4e7ff;
+}
+.my-journey__title {
+  padding: 60px;
+  font-size: 40px;
+  color: rgb(39, 38, 104);
+  text-align: center;
+}
+.my-journey__para {
+  padding: 10px 0px;
+  font-size: 15px;
+  color: rgb(103, 153, 255);
+}
+.my-journey__paras {
+  padding: 40px 0px;
+}
+
+.my-experience {
+  padding: 10px 0px;
+}
+.my-experience__title {
+  font-size: 30px;
+  color: rgb(39, 38, 104);
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.my-experience-section {
+  background-color: lightcyan;
+  padding: 20px;
+  margin: 20px 0px;
+}
+.my-experience-section__text--date {
+  font-size: 10px;
+  color: rgb(39, 38, 104);
+}
+.my-experience-section__text--header {
+  font-size: 14px;
+  color: rgb(39, 38, 104);
+}
+.my-experience-section__list {
+  padding: 10px 13px;
+}
+.my-experience-section__list-item {
+  padding: 10px 0px;
+  font-size: 12px;
+  color: rgb(39, 38, 104);
+}
+
 @media screen and (min-width: 768px) {
+  .my-journey {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 60px;
+  }
+  .my-journey__title {
+    padding: 0px 20px 0px 30px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .my-journey__para {
+    padding: 0px 20px 20px 0px;
+    width: 40vw;
+    font-size: 13px;
+  }
+  .my-experience {
+    padding: 10px 0px;
+  }
+  .my-experience__title {
+    font-size: 30px;
+    color: rgb(39, 38, 104);
+    padding: 0px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .my-experience-section__list-item {
+    font-size: 9px;
+    padding: 0;
+  }
   .nav-container {
     display: none;
   }
@@ -452,7 +493,7 @@ html {
   .desktop-navigation-container__link {
     text-decoration: none;
     color: rgb(39, 38, 104);
-    padding: 11px 25px;
+    padding: 11px 11px;
     border-radius: 0px 10px;
     flex-direction: column;
     transition: ease 0.3s;

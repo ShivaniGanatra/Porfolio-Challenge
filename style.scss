@@ -108,7 +108,9 @@ html {
 .nav-link {
     padding: 10px;
     transition: background-color .3s ease;
-    @include flex-center(row);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     text-decoration: none;
 
     &:hover {
@@ -245,8 +247,112 @@ html {
     }
 }
 
+.my-journey {
+    padding: 30px;
+    background-color: lighten($color: $quarternary-color, $amount: 6);
+
+    &__title {
+        @include title-font-style;
+        text-align: center;
+
+    }
+
+    &__para {
+        padding: 10px 0px;
+        @include medium-text
+    }
+
+    &__paras {
+        padding:  40px 0px;
+
+    }
+
+}
+
+.my-experience {
+    padding: 10px 0px;
+    
+
+    &__title {
+        @include medium-large-text;
+        padding: 10px 10px;
+        display: flex;
+        justify-content: center;
+
+    }
+}
+
+.my-experience-section {
+
+    background-color: $secondary-color;
+    padding: 20px;
+    margin: 20px 0px;
+
+    &__text--date {
+        font-size: 10px;
+        color: $septenary-color
+    }
+    
+    &__text--header {
+        font-size: 14px;
+        color: $septenary-color
+    }
+    
+    &__list {
+        padding: 10px 13px;
+    }
+    
+    &__list-item {
+        padding: 10px 0px;
+        @include small-text
+    }
+
+}
+
 
 @media screen and (min-width:768px) {
+
+    .my-journey {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 60px;
+        
+
+        &__title {
+            padding: 0px 20px 0px 30px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        &__para {
+            padding: 0px 20px 20px 0px;
+            width: 40vw;
+            font-size: 13px;
+            
+        }
+    }
+
+    .my-experience {
+        padding: 10px 0px;
+        
+    
+        &__title {
+            @include medium-large-text;
+            padding: 0px;
+            display: flex;
+            justify-content: flex-start;
+    
+        }
+    }
+
+    .my-experience-section__list-item {
+        font-size: 9px;
+        padding: 0;
+    }
+
+
+
     .nav-container {
         display: none;
     }
@@ -274,7 +380,7 @@ html {
         &__link {
             text-decoration: none;
             color: $septenary-color;
-            padding: 11px 25px;
+            padding: 11px 11px;
             border-radius: 0px 10px;
             flex-direction: column;
             transition: ease 0.3s;
@@ -359,6 +465,8 @@ html {
             padding: 35px;
         }
     }
+
+
 }
 
 @media screen and (min-width:1440px) {
