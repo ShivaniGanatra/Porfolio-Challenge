@@ -6,36 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 </head>
 
 <body>
-    <nav class="navigation-container">
-        <a class="navigation-container__link" href="#home">Home</a>
-        <a class="navigation-container__link" href="#about-me">About</a>
-        <a class="navigation-container__link" href="#projects">Projects</a>
-        <button class="navigation-container__button" href="#contact-info" >Get in Touch</button>    
+    <nav class="desktop-navigation-container">
+        <a class="desktop-navigation-container__link" href="#home">Home ( )</a>
+        <a class="desktop-navigation-container__link" href="#about-me">About ( )</a>
+        <a class="desktop-navigation-container__link" href="#technical-skills">Technical skills ( )</a>
+        <a class="desktop-navigation-container__link" href="#projects">Projects ( )</a>
+
+        <a class="desktop-navigation-container__link" href="#myJourney">My Journey ( )</a>
+        <a href="#contact-info">
+            <button class="desktop-navigation-container__button" href=contact-info">Get in Touch ( )</button>
+        </a>
     </nav>
 
-    <div id="home"></div>
-    <header class="header">
-        <div>
-            <h1 class="header__title">Hey I'm Shivani</h1>
+    <!-- this is the code for the interactive navbar -->
+    <!-- https://codepen.io/Profesor08/pen/BayQJRR -->
+
+    <div class="nav-container" tabindex="0">
+        <div class="nav-toggle"></div>
+
+        <nav class="nav-links">
+            <a class="nav-link" href="#home">
+                <i class=" nav-link__chevron fa fa-chevron-right" style="font-size:20px;color:purple"></i>
+                <p class="nav-link__text">Home ( )</p>
+            </a>
+
+            <a class="nav-link" href="#about-me">
+                <i class=" nav-link__chevron fa fa-chevron-right" style="font-size:20px;color:purple"></i>
+                <p class="nav-link__text">About Me ( )</p>
+            </a>
+
+            <a class="nav-link" href="#technical-skills">
+                <i class=" nav-link__chevron fa fa-chevron-right" style="font-size:20px;color:purple"></i>
+                <p class="nav-link__text">Technical skills ( )</p>
+            </a>
+
+            <a class="nav-link" href="#projects">
+                <i class=" nav-link__chevron fa fa-chevron-right" style="font-size:20px;color:purple"></i>
+                <p class="nav-link__text">My Projects ( )</p>
+            </a>
+
+            <a class="nav-link" href="#myJourney">
+                <i class=" nav-link__chevron fa fa-chevron-right" style="font-size:20px;color:purple"></i>
+                <p class="nav-link__text">My Journey ( )</p>
+            </a>
+
+            <a class="nav-link" href="#contact-info">
+                <i class=" nav-link__chevron fa fa-chevron-right" style="font-size:20px;color:purple"></i>
+                <p class="nav-link__text">Get in Touch ( )</p>
+            </a>
+
+
+
+        </nav>
+    </div>
+
+    <header id="home" class="header">
+        <div class="header__text">
+            <h1 class="header__title">Hello World! I'm Shivani</h1>
             <h2 class="header__sub-title">
-                A Junior software developer based in the UK
+                A Junior Software Developer based in the UK
             </h2>
         </div>
         <img class="header__image" src="./images/Picture (1).jpg" alt="bjhbjhb" />
     </header>
 
     <main>
-        <div id="about-me" class="main">
-            <h3 class="main__title--1">About me</h3>
+        <div id="about-me" class="about-me">
+            <h3 class="about-me__title--mobile">About me</h3>
 
-            <img class="main__image" src="images/self.jpg" alt="An animation of my websites" />
+            <img class="about-me__image" src="images/self.jpg" alt="An animation of my websites" />
 
-            <div class="text">
-                <h3 class="main__title--2">About me</h3>
-                <p class="main__paragraph">
+            <div class="about-me__text">
+                <h3 class="about-me__title--desktop">About me</h3>
+                <p class="about-me__paragraph">
                     Nulla ac praesent tempor, orci sit nunc eget. Aliquam urna nunc,
                     viverra sed tortor non. Id at pellentesque mauris at tincidunt
                     venenatis urna mus. Sodales pretium tempus tincidunt tellus in
@@ -43,7 +91,7 @@
                     enim lorem urna, vivamus pulvinar porttitor. Ultrices neque nec
                     feugiat ullamcorper ultricies ante sagittis commodo.
                 </p>
-                <p class="main__paragraph">
+                <p class="about-me__paragraph">
                     Nunc malesuada
                     amet at eget consectetur sit. Nibh in ut diam nulla sed porttitor
                     et. At neque tellus convallis urna, sodales neque. In enim auctor
@@ -56,8 +104,8 @@
             </div>
         </div>
 
-        <section class="technical-skills-card">
-            <h4 class="technical-skills-card__header ">Technical Skills</h4>
+        <section id="technical-skills" class="technical-skills-card">
+            <h4 class="technical-skills-card__title ">Technical Skills</h4>
             <p class="technical-skills-card__paragraph ">
                 "Maecenas accumsan tincidunt id et in ut diam sit. Metus, nec, augue
                 urna gravida nisl, tortor sapien nec sollicitudihjhhjn.
@@ -178,17 +226,15 @@
                         fill="black" />
                 </svg>
 
-
             </div>
         </section>
 
-        <div id="projects"></div>
-
-        <div class="projects-center">
+        <section id="projects" class="projects-center">
             <h5 class="projects-center__title">My Projects</h5>
-            <section class="project-containers"> 
+            <section class="project-containers">
+
                 <div class="project-container">
-                    <img class="project-container__img" src="./project card/plang .jpeg" alt="">
+                    <img class="project-container__img" src="./images/plang .jpeg" alt="">
                     <div class="project-container__text project-container__text--title">React</div>
                     <div class="project-container__text project-container__text--sub-title">Client Project</div>
                     <p class="project-container__text project-container__text--paragraph">Lorem ipsum dolor sit amet
@@ -201,7 +247,7 @@
                     </div>
                 </div>
                 <div class="project-container">
-                    <img class="project-container__img" src="./project card/plang .jpeg" alt="">
+                    <img class="project-container__img" src="./images/plang .jpeg" alt="">
                     <div class="project-container__text project-container__text--title">React</div>
                     <div class="project-container__text project-container__text--sub-title">Client Project</div>
                     <p class="project-container__text project-container__text--paragraph">Lorem ipsum dolor sit amet
@@ -214,7 +260,7 @@
                     </div>
                 </div>
                 <div class="project-container">
-                    <img class="project-container__img" src="./project card/plang .jpeg" alt="">
+                    <img class="project-container__img" src="./images/plang .jpeg" alt="">
                     <div class="project-container__text project-container__text--title">React</div>
                     <div class="project-container__text project-container__text--sub-title">Client Project</div>
                     <p class="project-container__text project-container__text--paragraph">Lorem ipsum dolor sit amet
@@ -227,7 +273,7 @@
                     </div>
                 </div>
                 <div class="project-container">
-                    <img class="project-container__img" src="./project card/plang .jpeg" alt="">
+                    <img class="project-container__img" src="./images/plang .jpeg" alt="">
                     <div class="project-container__text project-container__text--title">React</div>
                     <div class="project-container__text project-container__text--sub-title">Client Project</div>
                     <p class="project-container__text project-container__text--paragraph">Lorem ipsum dolor sit amet
@@ -240,7 +286,7 @@
                     </div>
                 </div>
                 <div class="project-container">
-                    <img class="project-container__img" src="./project card/plang .jpeg" alt="">
+                    <img class="project-container__img" src="./images/plang .jpeg" alt="">
                     <div class="project-container__text project-container__text--title">React</div>
                     <div class="project-container__text project-container__text--sub-title">Client Project</div>
                     <p class="project-container__text project-container__text--paragraph">Lorem ipsum dolor sit amet
@@ -253,7 +299,7 @@
                     </div>
                 </div>
                 <div class="project-container">
-                    <img class="project-container__img" src="./project card/plang .jpeg" alt="">
+                    <img class="project-container__img" src="./images/plang .jpeg" alt="">
                     <div class="project-container__text project-container__text--title">React</div>
                     <div class="project-container__text project-container__text--sub-title">Client Project</div>
                     <p class="project-container__text project-container__text--paragraph">Lorem ipsum dolor sit amet
@@ -264,18 +310,63 @@
                         <button class="project-container__button">Code</button>
                         <button class="project-container__button">Preview</button>
                     </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="myJourney" class="my-journey">
+
+            <div class="my-journey__section">
+                <h4 class="my-journey__title">My Journey</h4>
+                <div class="my-journey__paras">
+                    <p class="my-journey__para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus cumque dicta doloribus ratione
+                        praesentium aliquam iure nihil, totam repellendus quasi consequatur eum nisi laboriosam molestias veniam
+                        similique delectus, tempora repellat?
+                    </p>
+                    <p class="my-journey__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam consectetur reiciendis laudantium pariatur
+                        ipsum quia rem sint voluptatem, dolores porro sequi aliquam amet labore? Neque officiis nemo tenetur
+                        culpa cumque.
+                    </p>
+                </div>
+            </div>
+
+            <div class="my-experience">
+                <h5 class="my-experience__title">Experience</h5>
+                <div class="my-experience-section">
+                    <h6 class="my-experience-section__text my-experience-section__text--header">Trainee Software developer @Nology</h6>
+                    <p class="my-experience-section__text my-experience-section__text--date">Aug 24 - Present</p>
+                    <ul class="my-experience-section__list">
+                        <li class="my-experience-section__list-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, quam aperiam nihil dignissimos
+                            debitis esse voluptas, sit, architecto distinctio quibusdam placeat necessitatibus rerum. Sed
+                            doloribus numquam optio reprehenderit fuga ab.
+                        </li>
+                        <li class="my-experience-section__list-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum possimus delectus, corrupti
+                            praesentium assumenda unde neque, molestiae quae facere reiciendis repudiandae quisquam in harum,
+                            soluta libero corporis sit exercitationem quo.
+                        </li>
+                    </ul>
                 </div>
 
-
-        </div>
-
-
+                <div class="my-experience-section">
+                    <h6 class="my-experience-section__text my-experience-section__text--header">Trainee Software developer @Nology</h6>
+                    <p class="my-experience-section__text my-experience-section__text--date">Aug 24 - Present</p>
+                    <ul class="my-experience-section__list">
+                        <li class="my-experience-section__list-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, quam aperiam nihil dignissimos
+                            debitis esse voluptas, sit, architecto distinctio quibusdam placeat necessitatibus rerum. Sed
+                            doloribus numquam optio reprehenderit fuga ab.
+                        </li>
+                        <li class="my-experience-section__list-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum possimus delectus, corrupti
+                            praesentium assumenda unde neque, molestiae quae facere reiciendis repudiandae quisquam in harum,
+                            soluta libero corporis sit exercitationem quo.
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer id="footer" class="footer">
-        <a id="contact-info" class="footer__email"
-            href="mailto:shivani.ganatra@icloud.com">shivaniganatra@live.com</a>
+    <footer id="contact-info" class="footer">
+        <a class="footer__email" href="mailto:shivani.ganatra@icloud.com">shivani.ganatra@icloud.com</a>
         <div class="footer__icons">
 
             <a href="https://drive.google.com/file/d/1SCo3mXh3Bzv-8HEWJkZwtwh6Dq5mpMcq/view?usp=sharing">
@@ -312,6 +403,7 @@
 
         </div>
     </footer>
+    <script src="java.js"></script>
 </body>
 
 </html>

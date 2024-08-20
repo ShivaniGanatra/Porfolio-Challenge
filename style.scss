@@ -1,5 +1,6 @@
-@use"./variables.scss" as*;
-@use"./components.scss";
+@import"./variables.scss";
+@import"./components.scss";
+@import"./mixins.scss";
 
 html {
     scroll-behavior: smooth;
@@ -10,47 +11,162 @@ html {
     border: 0;
     margin: 0px;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Raleway", Calibri;
+}
+
+.desktop-navigation-container {
+    display: none;
+}
+
+.nav-container {
+    position: sticky;
+    top: 0;
+    display: inline-block;
+    max-width: $toggleSize + $toggleMargin;
+    max-height: $toggleSize + $toggleMargin;
+    overflow: visible;
+    outline: none;
+
+    //&:focus-within, &:focus {
+    &.is-active {
+
+        //this is adding a class
+        .nav-toggle {
+
+            &:before,
+            &:after {
+                box-shadow: none;
+            }
+
+            &:before {
+                transform: rotate(-45deg);
+            }
+
+            &:after {
+                transform: rotate(45deg);
+            }
+        }
+
+        .nav-links {
+            transform: translate(0, 0);
+        }
+    }
+}
+
+.nav-toggle {
+    $offset: $toggleSize * 0.5;
+    position: sticky;
+    top: 0;
+    width: $toggleSize;
+    height: $toggleSize;
+    margin: $toggleMargin;
+    z-index: 2;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: #{$offset - $toggleLine / 2};
+        left: 0;
+        transform: translate(0, 0);
+        width: 100%;
+        height: $toggleLine;
+        background: $toggleColor;
+        transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    &:before {
+        box-shadow: 0 #{$offset / 1.5} 0 0 $toggleColor;
+    }
+
+    &:after {
+        box-shadow: 0 #{-$offset / 1.5} 0 0 $toggleColor;
+    }
+}
+
+.nav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85vw;
+    height: auto;
+    z-index: 1;
+    padding: 80px 20px 20px 10px;
+    transition: transform .3s ease;
+    transform: translate(calc(-100% - 50px), 0);
+    background: $secondary-color;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px 0;
+    align-content: start;
+}
+
+.nav-link {
+    padding: 10px;
+    transition: background-color .3s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-decoration: none;
+
+    &:hover {
+        border-radius: 10px 0px;
+        text-decoration: none;
+        background-color: lighten($color: $secondary-color, $amount: 3);
+        border: 2px dashed $quinary-color;
+    }
+
+    &:active {
+        color: darken($color: $octinary-color, $amount: 20);
+    }
+
+    &__chevron {
+        padding: 10px;
+    }
+
+    &__text {
+        padding: 10px;
+    }
+
 }
 
 .header {
     font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex-center(column);
     padding: 20px 30px 70px 30px;
     color: $septenary-color;
+    background-color: lighten($color: $quarternary-color, $amount: 6);
+
 
     &__image {
         display: none;
     }
 
     &__title {
-        padding: 25px 10px 25px 10px;
+        padding: 25px 10px 15px 10px;
         font-size: 16px;
+        height: 20px;
     }
 
     &__sub-title {
-        font-size: 45px;
+        font-size: 28px;
+        padding: 25px 10px 15px 10px;
     }
 }
 
-.main {
-    color: $senary-color;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.about-me {
+    @include flex-center(column);
+    background-color: $octinary-color;
 
-    &__title--1 {
-        display: flex;
-        justify-content: center;
-        padding: 0px;
-        padding: 10px 20px 10px 20px;
-        font-size: 20px;
+    &__title--mobile {
+        @include title-font-style($senary-color);
     }
 
-    &__title--2 {
+    &__title--desktop {
         display: none;
     }
 
@@ -60,19 +176,18 @@ html {
     }
 
     &__paragraph {
-        padding: 10px 15px 10px 15px;
-        font-size: 12px;
+        padding: 10px 25px 40px 25px;
+        @include medium-text
     }
 }
+
+
 
 .footer {
     background-color: $primary-color;
     height: 216px;
     padding: 50px;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
+    @include flex-center(column-reverse);
 
     &__email {
         color: $septenary-color;
@@ -80,79 +195,225 @@ html {
     }
 
     &__icons {
-        display: flex;
+        @include flex-center(row);
         padding: 0;
         margin: 0;
         gap: 10px;
         background-color: $primary-color;
     }
 
-}
+    &__icon {
+        width: 60px;
+        height: 60px;
 
-.footer__icon {
-    width: 60px;
-    height: 60px;
+        &--github-icon {
+            fill: $senary-color;
+            width: 70px;
+            height: 70px;
+            transition: fill 0.3s ease;
+        }
 
+        &--github-icon:hover {
+            fill: $secondary-color;
+        }
 
+        &--cv-icon rect {
+            fill: $tertiary-color;
+            transition: fill 0.3s ease;
+        }
 
-    &--github-icon {
-        fill: $senary-color;
-        width: 70px;
-        height: 70px;
-        transition: fill 0.3s ease;
-    }
+        &--cv-icon path {
+            fill: $senary-color;
+            transition: fill 0.3s ease;
+        }
 
-    &--github-icon:hover {
-        fill: $secondary-color;
-    }
+        &--cv-icon:hover rect {
+            fill: $quinary-color;
+        }
 
-    &--cv-icon rect {
-        fill: $tertiary-color;
-        transition: fill 0.3s ease;
+        &--cv-icon:hover path {
+            fill: $secondary-color;
 
-    }
+        }
 
-    &--cv-icon path {
-        fill: $senary-color;
-        transition: fill 0.3s ease;
+        &--linkedin-icon {
+            fill: $tertiary-color;
+            transition: fill 0.3s ease;
+        }
 
-    }
-
-    &--cv-icon:hover rect {
-        fill: $quinary-color;
-    }
-
-    &--cv-icon:hover path {
-        fill: $secondary-color;
-
-    }
-
-    &--linkedin-icon {
-        fill: $tertiary-color;
-        transition: fill 0.3s ease;
-    }
-
-    &--linkedin-icon:hover {
-        fill: $quinary-color;
+        &--linkedin-icon:hover {
+            fill: $quinary-color;
+        }
     }
 }
 
+.my-journey {
+    padding: 30px;
+    background-color: lighten($color: $quarternary-color, $amount: 6);
+
+    &__title {
+        @include title-font-style;
+        text-align: center;
+
+    }
+
+    &__para {
+        padding: 10px 0px;
+        @include medium-text
+    }
+
+    &__paras {
+        padding:  40px 0px;
+
+    }
+
+}
+
+.my-experience {
+    padding: 10px 0px;
+    
+
+    &__title {
+        @include medium-large-text;
+        padding: 10px 10px;
+        display: flex;
+        justify-content: center;
+
+    }
+}
+
+.my-experience-section {
+
+    background-color: $secondary-color;
+    padding: 20px;
+    margin: 20px 0px;
+
+    &__text--date {
+        font-size: 10px;
+        color: $septenary-color
+    }
+    
+    &__text--header {
+        font-size: 14px;
+        color: $septenary-color
+    }
+    
+    &__list {
+        padding: 10px 13px;
+    }
+    
+    &__list-item {
+        padding: 10px 0px;
+        @include small-text
+    }
+
+}
 
 
 @media screen and (min-width:768px) {
 
-    #home {
-        width: fit-content;
-        height: 50px;
+    .my-journey {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 60px;
+        
+
+        &__title {
+            padding: 0px 20px 0px 30px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        &__para {
+            padding: 0px 20px 20px 0px;
+            width: 40vw;
+            font-size: 13px;
+            
+        }
     }
 
-    .navigation__container {
+    .my-experience {
+        padding: 10px 0px;
+        
+    
+        &__title {
+            @include medium-large-text;
+            padding: 0px;
+            display: flex;
+            justify-content: flex-start;
+    
+        }
+    }
+
+    .my-experience-section__list-item {
+        font-size: 9px;
+        padding: 0;
+    }
+
+
+
+    .nav-container {
+        display: none;
+    }
+
+    .burger-menu-nav {
+        display: none;
+    }
+
+    .desktop-navigation-container {
         display: block;
+    }
+
+    .desktop-navigation-container {
+        background-color: lighten($color: $quarternary-color, $amount: 4);
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        align-items: flex-end;
+        padding: 7px 20px 5px 20px;
+        font-size: 13px;
+        gap: 10px;
+
+        &__link {
+            text-decoration: none;
+            color: $septenary-color;
+            padding: 11px 11px;
+            border-radius: 0px 10px;
+            flex-direction: column;
+            transition: ease 0.3s;
+        }
+
+        &__link:hover {
+            border: 2px $senary-color dashed;
+            background-color: $nonary-color;
+            color: darken($color: $senary-color, $amount: 25);
+        }
+
+        &__button {
+            padding: 11px 25px;
+            background-color: $secondary-color;
+            border: 2px $senary-color solid;
+            border-radius: 0px 10px;
+            color: $septenary-color;
+            font-size: 13px;
+            font-weight: bolder;
+            transition: 0.3s ease;
+        }
+
+        &__button:hover {
+            background-color: $quinary-color;
+            color: $primary-color;
+            border: 3px $octinary-color dashed;
+        }
     }
 
     .header {
         padding: 30px 60px 40px 60px;
         text-align: start;
+        background-color: $primary-color;
 
         &__image {
             display: block;
@@ -164,18 +425,30 @@ html {
         flex-direction: row;
     }
 
-    .main {
-        display: flex;
-        flex-direction: row;
-        padding: 50px;
+    .about-me {
+        @include flex-center(row);
+        padding: 60px;
+        background-color: $octinary-color;
 
-        &__title--1 {
+        &__image {
+            width: 85%;
+            padding: 0%;
+        }
+
+        &__title--mobile {
             display: none;
         }
 
-        &__title--2 {
+        &__title--desktop {
             display: block;
-            padding: 15px;
+            font-size: 40px;
+            padding: 5px 25px;
+            color: $senary-color;
+        }
+
+        &__paragraph {
+            font-size: 11px;
+            padding: 5px 25px;
         }
     }
 
@@ -192,6 +465,8 @@ html {
             padding: 35px;
         }
     }
+
+
 }
 
 @media screen and (min-width:1440px) {
@@ -208,9 +483,7 @@ html {
         }
     }
 
-
-
-    .main {
+    .about-me {
         padding: 100px;
 
         &__image {
@@ -218,13 +491,11 @@ html {
             height: auto;
         }
 
-        &__title--2 {
-
+        &__title--desktop {
             font-size: 36px;
         }
 
         &__paragraph {
-            padding: 10px 15px 10px 15px;
             font-size: 20px;
         }
     }
